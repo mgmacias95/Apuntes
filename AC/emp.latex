@@ -1,0 +1,33 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2424,2574)(2389,-1723)
+\thinlines
+{\color[rgb]{0,0,0}\put(2401,839){\line( 1, 0){2400}}
+\put(4801,839){\line(-1,-2){1260}}
+\put(3601,-1711){\line(-1, 2){1260}}
+}%
+{\color[rgb]{0,0,0}\put(3301,-1036){\line( 1, 0){600}}
+}%
+{\color[rgb]{0,0,0}\put(2926,-361){\line( 1, 0){1350}}
+}%
+{\color[rgb]{0,0,0}\put(2626,314){\line( 1, 0){1950}}
+}%
+\put(2701,614){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Sistema}%
+}}}}
+\put(2926, 14){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Armario}%
+}}}}
+\put(3001,-136){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}(cabinet)}%
+}}}}
+\put(3226,-586){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Placa}%
+}}}}
+\put(3301,-811){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}(board)}%
+}}}}
+\put(3451,-1186){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}chip}%
+}}}}
+\end{picture}%
