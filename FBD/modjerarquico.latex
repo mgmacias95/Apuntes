@@ -1,0 +1,63 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(7374,1587)(364,-1498)
+\thinlines
+{\color[rgb]{0,0,0}\put(826,-586){\vector( 0,-1){600}}
+}%
+{\color[rgb]{0,0,0}\put(4801,-436){\framebox(825,225){}}
+}%
+{\color[rgb]{0,0,0}\put(2851,-436){\framebox(825,225){}}
+}%
+{\color[rgb]{0,0,0}\put(3676,-436){\framebox(1125,225){}}
+}%
+{\color[rgb]{0,0,0}\put(2476,-1411){\framebox(300,225){}}
+}%
+{\color[rgb]{0,0,0}\put(4876,-1411){\framebox(300,225){}}
+}%
+{\color[rgb]{0,0,0}\put(3451,-511){\vector(-1,-2){330}}
+}%
+{\color[rgb]{0,0,0}\put(5701,-511){\vector( 2,-3){392.308}}
+}%
+{\color[rgb]{0,0,0}\put(5176,-1411){\framebox(2550,225){}}
+}%
+{\color[rgb]{0,0,0}\put(376,-511){\framebox(1050,225){}}
+}%
+{\color[rgb]{0,0,0}\put(376,-1486){\framebox(1575,225){}}
+}%
+{\color[rgb]{0,0,0}\put(2776,-1411){\framebox(1725,225){}}
+}%
+{\color[rgb]{0,0,0}\put(5626,-436){\framebox(900,225){}}
+}%
+\put(451,-61){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Esquemas}%
+}}}}
+\put(4801,-61){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Instancias}%
+}}}}
+\put(451,-511){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}ALUMNOS}%
+}}}}
+\put(451,-1411){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}ASIGNATURAS}%
+}}}}
+\put(3751,-361){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Jose Suarez}%
+}}}}
+\put(4876,-361){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}17/02/75}%
+}}}}
+\put(5701,-361){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Granada}%
+}}}}
+\put(2851,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}BASES DE DATOS}%
+}}}}
+\put(5251,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}SISTEMAS OPERATIVOS}%
+}}}}
+\put(4126,-661){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}enlaces}%
+}}}}
+\put(4876,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}SO}%
+}}}}
+\put(2476,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}BD}%
+}}}}
+\put(2851,-361){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}24235643}%
+}}}}
+\end{picture}%

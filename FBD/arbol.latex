@@ -1,0 +1,113 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(5499,1449)(139,-1423)
+\thinlines
+{\color[rgb]{0,0,0}\put(2401,-211){\framebox(1200,225){}}
+}%
+{\color[rgb]{0,0,0}\put(3001, 14){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(3301, 14){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(2701, 14){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(676,-886){\framebox(1200,225){}}
+}%
+{\color[rgb]{0,0,0}\put(1276,-661){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(1576,-661){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(976,-661){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(3751,-886){\framebox(1200,225){}}
+}%
+{\color[rgb]{0,0,0}\put(4351,-661){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(4651,-661){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(4051,-661){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(3001,-1411){\framebox(1200,225){}}
+}%
+{\color[rgb]{0,0,0}\put(3601,-1186){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(3901,-1186){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(3301,-1186){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(1576,-1411){\framebox(1200,225){}}
+}%
+{\color[rgb]{0,0,0}\put(2176,-1186){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(2476,-1186){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(1876,-1186){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(151,-1411){\framebox(1200,225){}}
+}%
+{\color[rgb]{0,0,0}\put(751,-1186){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(1051,-1186){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(451,-1186){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(4426,-1411){\framebox(1200,225){}}
+}%
+{\color[rgb]{0,0,0}\put(5026,-1186){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(5326,-1186){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(4726,-1186){\line( 0,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(2701,-211){\vector(-3,-1){1057.500}}
+}%
+{\color[rgb]{0,0,0}\put(3001,-211){\vector( 3,-1){1125}}
+}%
+{\color[rgb]{0,0,0}\put(676,-886){\vector(-4,-3){300}}
+}%
+{\color[rgb]{0,0,0}\put(976,-886){\vector( 4,-1){900}}
+}%
+{\color[rgb]{0,0,0}\put(1876,-886){\vector( 4,-1){1182.353}}
+}%
+{\color[rgb]{0,0,0}\put(4351,-886){\vector( 1,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(1276,-1336){\vector( 1, 0){225}}
+}%
+{\color[rgb]{0,0,0}\put(2626,-1336){\vector( 1, 0){300}}
+}%
+{\color[rgb]{0,0,0}\put(4126,-1336){\vector( 1, 0){225}}
+}%
+\put(2776,-136){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}83}%
+}}}}
+\put(751,-811){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}18}%
+}}}}
+\put(1651,-811){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}50}%
+}}}}
+\put(226,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}10}%
+}}}}
+\put(1126,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}13}%
+}}}}
+\put(1651,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}18}%
+}}}}
+\put(526,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}11}%
+}}}}
+\put(2251,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}32}%
+}}}}
+\put(4126,-811){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}96}%
+}}}}
+\put(3076,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}50}%
+}}}}
+\put(3676,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}62}%
+}}}}
+\put(3976,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}71}%
+}}}}
+\put(4501,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}96}%
+}}}}
+\put(5101,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}97}%
+}}}}
+\end{picture}%

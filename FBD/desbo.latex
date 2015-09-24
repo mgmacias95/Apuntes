@@ -1,0 +1,85 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(6402,3390)(661,-2776)
+\thinlines
+{\color[rgb]{0,0,0}\put(1726,-511){\framebox(1875,675){}}
+}%
+{\color[rgb]{0,0,0}\put(4501,-61){\line( 1, 0){2025}}
+}%
+{\color[rgb]{0,0,0}\put(4501,-661){\line( 1, 0){2025}}
+}%
+{\color[rgb]{0,0,0}\put(4501,-1486){\line( 1, 0){2025}}
+}%
+{\color[rgb]{0,0,0}\put(4501,-2161){\line( 1, 0){2025}}
+}%
+{\color[rgb]{0,0,0}\put(4501,-811){\framebox(2025,1125){}}
+}%
+{\color[rgb]{0,0,0}\put(4501,-361){\line( 1, 0){2025}}
+}%
+{\color[rgb]{0,0,0}\put(4501,-2461){\framebox(2025,1350){}}
+}%
+{\color[rgb]{0,0,0}\put(4501,-1786){\line( 1, 0){2025}}
+}%
+{\color[rgb]{0,0,0}\put(1051, 14){\vector( 1, 0){675}}
+}%
+{\color[rgb]{0,0,0}\put(1051,-286){\vector( 4, 1){600}}
+}%
+{\color[rgb]{0,0,0}\put(1051,-511){\vector( 3, 1){607.500}}
+}%
+{\color[rgb]{0,0,0}\put(901,-886){\vector( 2, 1){690}}
+}%
+{\color[rgb]{0,0,0}\put(1051,-1111){\vector( 3, 2){761.538}}
+}%
+{\color[rgb]{0,0,0}\put(3601,-136){\vector( 3, 4){225}}
+}%
+{\color[rgb]{0,0,0}\put(3601,-361){\vector( 1,-1){225}}
+}%
+{\color[rgb]{0,0,0}\put(6376,164){\line( 1, 0){675}}
+\put(7051,164){\line( 0,-1){1350}}
+\put(7051,-1186){\vector(-1, 0){450}}
+}%
+{\color[rgb]{0,0,0}\put(6301,-511){\line( 1, 0){525}}
+\put(6826,-511){\line( 0,-1){1500}}
+\put(6826,-2011){\vector(-1, 0){225}}
+}%
+{\color[rgb]{0,0,0}\put(4051,164){\vector( 1, 0){375}}
+}%
+{\color[rgb]{0,0,0}\put(4051,-511){\vector( 1, 0){375}}
+}%
+\put(751,-61){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}k1}%
+}}}}
+\put(751,-361){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}k2}%
+}}}}
+\put(751,-586){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}k3}%
+}}}}
+\put(676,-886){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}k4}%
+}}}}
+\put(751,-1186){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}k5}%
+}}}}
+\put(1951,-61){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Algoritmo de }%
+}}}}
+\put(1951,-256){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}direccionamiento}%
+}}}}
+\put(4876,464){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Fichero}%
+}}}}
+\put(4576, 89){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}k1}%
+}}}}
+\put(4576,-586){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}h1}%
+}}}}
+\put(4576,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}k2}%
+}}}}
+\put(4576,-2011){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}h2}%
+}}}}
+\put(4576,-2761){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Zona de desbordamiento}%
+}}}}
+\put(3826, 89){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}k'}%
+}}}}
+\put(3826,-586){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}h'}%
+}}}}
+\end{picture}%

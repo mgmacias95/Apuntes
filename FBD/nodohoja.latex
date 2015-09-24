@@ -1,0 +1,85 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(7152,1872)(1189,-3421)
+\thinlines
+{\color[rgb]{0,0,0}\put(1201,-2311){\framebox(6000,750){}}
+}%
+{\color[rgb]{0,0,0}\put(2401,-1561){\line( 0,-1){750}}
+}%
+{\color[rgb]{0,0,0}\put(3601,-1561){\line( 0,-1){750}}
+}%
+{\color[rgb]{0,0,0}\put(4801,-1561){\line( 0,-1){750}}
+}%
+{\color[rgb]{0,0,0}\put(6001,-1561){\line( 0,-1){750}}
+}%
+{\color[rgb]{0,0,0}\put(1801,-1561){\line( 0,-1){750}}
+}%
+{\color[rgb]{0,0,0}\put(3001,-1561){\line( 0,-1){750}}
+}%
+{\color[rgb]{0,0,0}\put(4201,-1561){\line( 0,-1){750}}
+}%
+{\color[rgb]{0,0,0}\put(5401,-1561){\line( 0,-1){750}}
+}%
+{\color[rgb]{0,0,0}\put(6601,-1561){\line( 0,-1){750}}
+}%
+{\color[rgb]{0,0,0}\put(7201,-2311){\framebox(600,750){}}
+}%
+{\color[rgb]{0,0,0}\put(2101,-2236){\vector( 0,-1){600}}
+}%
+{\color[rgb]{0,0,0}\put(3901,-2236){\vector( 0,-1){675}}
+}%
+{\color[rgb]{0,0,0}\put(5176,-2161){\vector( 0,-1){825}}
+}%
+{\color[rgb]{0,0,0}\put(7051,-2236){\vector( 0,-1){750}}
+}%
+{\color[rgb]{0,0,0}\put(7576,-2011){\vector( 1, 0){600}}
+}%
+\put(1276,-2086){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}C1}%
+}}}}
+\put(1876,-2086){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}R1}%
+}}}}
+\put(2476,-2086){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}...}%
+}}}}
+\put(3076,-2086){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Ci}%
+}}}}
+\put(3676,-2086){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Ri}%
+}}}}
+\put(4276,-2086){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Ci+1}%
+}}}}
+\put(4876,-2086){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Ri+1}%
+}}}}
+\put(5476,-2086){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}...}%
+}}}}
+\put(6076,-2086){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Cn}%
+}}}}
+\put(6751,-2086){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Rn}%
+}}}}
+\put(7351,-2086){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}P}%
+}}}}
+\put(1426,-3136){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}al registro }%
+}}}}
+\put(1426,-3331){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}con valor C1}%
+}}}}
+\put(3301,-3061){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}al registro}%
+}}}}
+\put(3301,-3256){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}con valor Ci}%
+}}}}
+\put(5026,-3211){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}al registro}%
+}}}}
+\put(5026,-3406){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}con valor Ci+1}%
+}}}}
+\put(6676,-3136){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}al registro}%
+}}}}
+\put(6676,-3331){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}con valor Cn}%
+}}}}
+\put(8326,-2011){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}siguiente}%
+}}}}
+\put(8326,-2206){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}nodo hoja}%
+}}}}
+\end{picture}%

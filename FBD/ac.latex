@@ -1,0 +1,113 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(7824,2086)(1189,-2450)
+\thinlines
+{\color[rgb]{1,1,1}\put(8551,-1411){\framebox(450,375){}}
+}%
+{\color[rgb]{1,1,1}\put(8776,-1411){\oval(450,150)}
+}%
+{\color[rgb]{0,0,0}\put(8776,-1411){\oval(450,150)[bl]}
+\put(8776,-1411){\oval(450,150)[br]}
+}%
+{\color[rgb]{0,0,0}\put(8776,-1036){\oval(450,150)}
+}%
+{\color[rgb]{0,0,0}\put(8551,-1036){\line( 0,-1){375}}
+}%
+{\color[rgb]{0,0,0}\put(9001,-1036){\line( 0,-1){375}}
+}%
+{\color[rgb]{1,1,1}\put(8401,-1561){\framebox(450,375){}}
+}%
+{\color[rgb]{1,1,1}\put(8626,-1561){\oval(450,150)}
+}%
+{\color[rgb]{0,0,0}\put(8626,-1561){\oval(450,150)[bl]}
+\put(8626,-1561){\oval(450,150)[br]}
+}%
+{\color[rgb]{0,0,0}\put(8626,-1186){\oval(450,150)}
+}%
+{\color[rgb]{0,0,0}\put(8401,-1186){\line( 0,-1){375}}
+}%
+{\color[rgb]{0,0,0}\put(8851,-1186){\line( 0,-1){375}}
+}%
+{\color[rgb]{1,1,1}\put(8251,-1711){\framebox(450,375){}}
+}%
+{\color[rgb]{1,1,1}\put(8476,-1711){\oval(450,150)}
+}%
+{\color[rgb]{0,0,0}\put(8476,-1711){\oval(450,150)[bl]}
+\put(8476,-1711){\oval(450,150)[br]}
+}%
+{\color[rgb]{0,0,0}\put(8476,-1336){\oval(450,150)}
+}%
+{\color[rgb]{0,0,0}\put(8251,-1336){\line( 0,-1){375}}
+}%
+{\color[rgb]{0,0,0}\put(8701,-1336){\line( 0,-1){375}}
+}%
+{\color[rgb]{1,1,1}\put(8101,-1861){\framebox(450,375){}}
+}%
+{\color[rgb]{1,1,1}\put(8326,-1861){\oval(450,150)}
+}%
+\put(2251,-811){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}almacenada}%
+}}}}
+\put(2251,-586){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}1. Solicita pagina}%
+}}}}
+\put(4876,-586){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}2. Solicita bloques}%
+}}}}
+\put(4876,-811){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}de SO}%
+}}}}
+\put(7201,-511){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}3. Operacion de}%
+}}}}
+\put(7201,-736){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}E/S a Disco}%
+}}}}
+\put(3451,-1336){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Gestor }%
+}}}}
+\put(3451,-1561){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}de}%
+}}}}
+\put(3451,-1786){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}archivos}%
+}}}}
+\put(5701,-1411){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Gestor de}%
+}}}}
+\put(5701,-1636){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}disco}%
+}}}}
+{\color[rgb]{0,0,0}\put(5551,-2011){\framebox(1500,1125){}}
+}%
+{\color[rgb]{0,0,0}\put(8326,-1861){\oval(450,150)[bl]}
+\put(8326,-1861){\oval(450,150)[br]}
+}%
+{\color[rgb]{0,0,0}\put(8326,-1486){\oval(450,150)}
+}%
+{\color[rgb]{0,0,0}\put(8101,-1486){\line( 0,-1){375}}
+}%
+{\color[rgb]{0,0,0}\put(8551,-1486){\line( 0,-1){375}}
+}%
+{\color[rgb]{0,0,0}\put(1201,-2086){\framebox(975,1125){}}
+}%
+{\color[rgb]{0,0,0}\put(2326,-1036){\vector( 1, 0){900}}
+}%
+{\color[rgb]{0,0,0}\put(3151,-2011){\vector(-1, 0){825}}
+}%
+{\color[rgb]{0,0,0}\put(3301,-2086){\framebox(1200,1125){}}
+}%
+{\color[rgb]{0,0,0}\put(5401,-2011){\vector(-1, 0){675}}
+}%
+{\color[rgb]{0,0,0}\put(4651,-1036){\vector( 1, 0){825}}
+}%
+{\color[rgb]{0,0,0}\put(7201,-1036){\vector( 1, 0){750}}
+}%
+{\color[rgb]{0,0,0}\put(7876,-1936){\vector(-1, 0){600}}
+}%
+\put(1501,-1486){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}SGBD}%
+}}}}
+\put(2101,-2386){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}5. Pagina solicitada}%
+}}}}
+\put(4651,-2386){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}4. Bloques solicitados}%
+}}}}
+\put(7051,-2386){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Sectores solicitados}%
+}}}}
+\put(8251,-886){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Base de Datos}%
+}}}}
+\end{picture}%

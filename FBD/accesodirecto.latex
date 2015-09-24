@@ -1,0 +1,52 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(7227,2874)(1189,-3523)
+\thinlines
+{\color[rgb]{0,0,0}\put(8026,-661){\line( 0,-1){2850}}
+\put(8026,-3511){\line( 1, 0){300}}
+}%
+{\color[rgb]{0,0,0}\put(8026,-3136){\line( 1, 0){300}}
+}%
+{\color[rgb]{0,0,0}\put(8026,-2761){\line( 1, 0){300}}
+}%
+{\color[rgb]{0,0,0}\put(8026,-2461){\line( 1, 0){300}}
+}%
+{\color[rgb]{0,0,0}\put(8026,-2086){\line( 1, 0){300}}
+}%
+{\color[rgb]{0,0,0}\put(8026,-1711){\line( 1, 0){300}}
+}%
+{\color[rgb]{0,0,0}\put(8026,-1336){\line( 1, 0){300}}
+}%
+{\color[rgb]{0,0,0}\put(8026,-961){\line( 1, 0){300}}
+}%
+{\color[rgb]{0,0,0}\put(1201,-2386){\framebox(1950,825){}}
+}%
+{\color[rgb]{0,0,0}\put(3376,-2011){\vector( 1, 0){1800}}
+}%
+{\color[rgb]{0,0,0}\put(5251,-2386){\framebox(1950,825){}}
+}%
+{\color[rgb]{0,0,0}\put(7276,-1936){\vector( 1, 0){675}}
+}%
+{\color[rgb]{0,0,0}\put(8026,-661){\line( 1, 0){300}}
+}%
+\put(1351,-1861){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Algoritmo de }%
+}}}}
+\put(1351,-2056){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}direccionamiento}%
+}}}}
+\put(3451,-1636){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Valor entre 0 y M}%
+}}}}
+\put(5401,-1786){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Transformacion}%
+}}}}
+\put(5401,-2011){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}entero/RID}%
+}}}}
+\put(8401,-1936){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Archivo}%
+}}}}
+\put(8401,-2161){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}fisico}%
+}}}}
+\end{picture}%

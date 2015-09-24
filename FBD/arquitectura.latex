@@ -1,0 +1,69 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(6474,2424)(64,-2998)
+\thinlines
+{\color[rgb]{0,0,0}\put(3826,-961){\vector( 1, 0){1350}}
+}%
+{\color[rgb]{0,0,0}\put( 76,-1411){\framebox(6450,75){}}
+}%
+{\color[rgb]{0,0,0}\put(376,-1111){\framebox(750,225){}}
+}%
+{\color[rgb]{0,0,0}\put(1426,-1111){\framebox(825,225){}}
+}%
+{\color[rgb]{0,0,0}\put(2701,-1111){\framebox(900,225){}}
+}%
+{\color[rgb]{0,0,0}\put(226,-1861){\framebox(1575,225){}}
+}%
+{\color[rgb]{0,0,0}\put(2026,-2086){\framebox(2100,525){}}
+}%
+{\color[rgb]{0,0,0}\put(976,-1186){\vector(-3, 1){  0}}
+\put(976,-1186){\vector( 3,-1){990}}
+}%
+{\color[rgb]{0,0,0}\put(2176,-1186){\vector(-1, 1){  0}}
+\put(2176,-1186){\vector( 1,-1){300}}
+}%
+{\color[rgb]{0,0,0}\put(3076,-1186){\vector( 0, 1){  0}}
+\put(3076,-1186){\vector( 0,-1){300}}
+}%
+{\color[rgb]{0,0,0}\put(151,-2386){\framebox(6375,75){}}
+}%
+{\color[rgb]{0,0,0}\put(151,-2836){\framebox(1275,225){}}
+}%
+{\color[rgb]{0,0,0}\put(2026,-2986){\framebox(1950,450){}}
+}%
+{\color[rgb]{0,0,0}\put(2926,-2161){\vector( 0, 1){  0}}
+\put(2926,-2161){\vector( 0,-1){300}}
+}%
+{\color[rgb]{0,0,0}\put(4351,-2761){\vector( 3, 2){1263.461}}
+}%
+{\color[rgb]{0,0,0}\put(4276,-1786){\vector( 1, 0){1275}}
+}%
+{\color[rgb]{0,0,0}\put(451,-811){\framebox(1275,225){}}
+}%
+\put(451,-1036){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}vision1}%
+}}}}
+\put(1501,-1036){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}vision 2}%
+}}}}
+\put(2776,-1036){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}vision 3}%
+}}}}
+\put(5176,-1036){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}usuarios}%
+}}}}
+\put(301,-1786){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}nivel conceptual}%
+}}}}
+\put(2176,-1861){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Vision logica global}%
+}}}}
+\put(5701,-1861){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}DBA}%
+}}}}
+\put(226,-2761){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}nivel interno}%
+}}}}
+\put(2101,-2761){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Vision fisica global}%
+}}}}
+\put(526,-736){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Nivel externo}%
+}}}}
+\end{picture}%

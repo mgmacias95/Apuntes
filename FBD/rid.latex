@@ -1,0 +1,53 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(6702,4512)(1711,-4573)
+\thinlines
+{\color[rgb]{0,0,0}\put(2401,-961){\framebox(2400,600){}}
+}%
+{\color[rgb]{0,0,0}\put(3601,-361){\line( 0,-1){600}}
+}%
+{\color[rgb]{0,0,0}\put(4801,-4561){\framebox(3600,2250){}}
+}%
+{\color[rgb]{0,0,0}\put(4801,-2761){\framebox(525,450){}}
+}%
+{\color[rgb]{0,0,0}\put(5326,-2761){\framebox(975,450){}}
+}%
+{\color[rgb]{0,0,0}\put(6301,-2761){\framebox(450,450){}}
+}%
+{\color[rgb]{0,0,0}\put(6751,-2761){\framebox(450,450){}}
+}%
+{\color[rgb]{0,0,0}\put(7201,-2761){\framebox(450,450){}}
+}%
+{\color[rgb]{0,0,0}\put(7651,-2761){\framebox(450,450){}}
+}%
+{\color[rgb]{0,0,0}\put(6301,-2761){\framebox(1800,450){}}
+}%
+{\color[rgb]{0,0,0}\put(5176,-3811){\framebox(2850,450){}}
+}%
+{\color[rgb]{0,0,0}\put(2851,-661){\line( 0,-1){1800}}
+\put(2851,-2461){\vector( 1, 0){1725}}
+}%
+{\color[rgb]{0,0,0}\put(4201,-661){\line( 1, 0){2625}}
+\put(6826,-661){\line(-1, 0){ 75}}
+\put(6751,-661){\line( 1, 0){150}}
+\put(6901,-661){\vector( 0,-1){1575}}
+}%
+\put(2476,-211){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}pagina}%
+}}}}
+\put(3826,-211){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}offset}%
+}}}}
+\put(1726,-811){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}RID}%
+}}}}
+\put(4951,-2536){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}p}%
+}}}}
+\put(5401,-2536){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}cabecera}%
+}}}}
+\put(5326,-4111){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}registro solicitado}%
+}}}}
+\end{picture}%

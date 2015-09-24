@@ -1,0 +1,109 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(8049,3162)(-3611,452)
+\thinlines
+{\color[rgb]{0,0,0}\put(-3599,3014){\framebox(975,300){}}
+}%
+{\color[rgb]{0,0,0}\put(-2624,3014){\framebox(825,300){}}
+}%
+{\color[rgb]{0,0,0}\put(-1799,3014){\framebox(1050,300){}}
+}%
+{\color[rgb]{0,0,0}\put(-749,3014){\framebox(1050,300){}}
+}%
+{\color[rgb]{0,0,0}\put(301,3014){\framebox(750,300){}}
+}%
+{\color[rgb]{0,0,0}\put(526,2264){\framebox(1350,300){}}
+}%
+{\color[rgb]{0,0,0}\put(-1049,2939){\vector( 3,-1){1417.500}}
+}%
+{\color[rgb]{0,0,0}\put(3376,2939){\vector(-3,-1){1305}}
+}%
+{\color[rgb]{0,0,0}\put(1501,3014){\framebox(600,300){}}
+}%
+{\color[rgb]{0,0,0}\put(2101,3014){\framebox(900,300){}}
+}%
+{\color[rgb]{0,0,0}\put(3001,3014){\framebox(675,300){}}
+}%
+{\color[rgb]{0,0,0}\put(3676,3014){\framebox(750,300){}}
+}%
+{\color[rgb]{0,0,0}\put(-2849,1139){\framebox(375,300){}}
+}%
+{\color[rgb]{0,0,0}\put(-2474,1139){\framebox(1725,300){}}
+}%
+{\color[rgb]{0,0,0}\put(  1,1064){\framebox(450,375){}}
+}%
+{\color[rgb]{0,0,0}\put(1576,1139){\framebox(1050,225){}}
+}%
+{\color[rgb]{0,0,0}\put(2626,1139){\framebox(1425,225){}}
+}%
+{\color[rgb]{0,0,0}\put(-674,1289){\vector( 1, 0){600}}
+}%
+{\color[rgb]{0,0,0}\put(1426,1289){\vector(-1, 0){825}}
+}%
+{\color[rgb]{0,0,0}\put(-2849,539){\framebox(375,300){}}
+}%
+{\color[rgb]{0,0,0}\put(-2474,539){\framebox(1950,300){}}
+}%
+{\color[rgb]{0,0,0}\put( 76,464){\framebox(375,375){}}
+}%
+{\color[rgb]{0,0,0}\put(1576,464){\framebox(975,300){}}
+}%
+{\color[rgb]{0,0,0}\put(2551,464){\framebox(1500,300){}}
+}%
+{\color[rgb]{0,0,0}\put(676,614){\vector( 3, 2){813.462}}
+}%
+{\color[rgb]{0,0,0}\put(226,1064){\vector( 0,-1){150}}
+}%
+\put(-3524,3089){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Cod-asig}%
+}}}}
+\put(-2549,3089){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Nombre}%
+}}}}
+\put(-2474,3464){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Asignaturas}%
+}}}}
+\put(-1649,3089){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Creditos}%
+}}}}
+\put(-599,3089){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Caracter}%
+}}}}
+\put(451,3089){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Curso}%
+}}}}
+\put(3376,3464){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Alumnos}%
+}}}}
+\put(601,2339){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Calificacion}%
+}}}}
+\put(601,1964){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Matricula}%
+}}}}
+\put(1576,3089){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}DNI}%
+}}}}
+\put(2251,3089){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Nombre}%
+}}}}
+\put(3076,3089){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Edad}%
+}}}}
+\put(3826,3089){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Beca}%
+}}}}
+\put(-2774,1214){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}BD}%
+}}}}
+\put(-2324,1214){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Bases de datos}%
+}}}}
+\put( 76,1214){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}7.5}%
+}}}}
+\put(1651,1214){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}24238643}%
+}}}}
+\put(2851,1214){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Pepe Lopez}%
+}}}}
+\put(-2849,614){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}SO}%
+}}}}
+\put(-2399,614){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Sistemas operativos}%
+}}}}
+\put(151,689){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}4.5}%
+}}}}
+\put(1651,614){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}22348652}%
+}}}}
+\put(2701,614){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Juan Perez}%
+}}}}
+\end{picture}%
