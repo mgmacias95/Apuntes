@@ -1,0 +1,4 @@
+{
+	"cmd": ["pdflatex","-shell-escape","$file_name"],
+    "selector": "text.tex.latex"
+}
