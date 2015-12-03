@@ -1,6 +1,17 @@
 # Apuntes
 Apuntes hechos a LaTeX de algunas asignaturas de la carrera.
 
+###Compilación
+Para compilar simplemente:
+```
+make
+```
+
+Para limpiar todos los archivos que genera la compilación:
+```
+make clean
+``` 
+
 ### Contenido
 * Apuntes IES - Curso 2013/2014
 * Apuntes ED - Curso 2014/2015 - Corregidos por la profesora __Rosa Rodríguez Sánchez__
