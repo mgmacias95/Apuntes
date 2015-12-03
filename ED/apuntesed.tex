@@ -5054,19 +5054,19 @@ Al menos debemos tener un inorden y un postorden ó preorden para ver el árbol 
 
 \noindent
 La siguiente tabla sirve de repaso y resumen de los recorridos, los valores serán verdadero o falso si $n$ se lista antes o después que $m$: \\[0.5cm]
-\begin{table}[H]
-\scriptsize
+% \begin{table}[H]
+% \scriptsize
 \begin{tabular}{|l|| l| l| l|} 
 \hline
 & $Pre(n) < Pre(m)$ & $In(n) < In(m)$ & $Post(n) < Post(m)$ \\
 \hline
 $n\in ~h_{izq}(m)$ & F & V & V \\ \hline
 $n\in ~h_{dcha}(m)$ & F & F & V \\ \hline
-\multirow{2}{*}{$n\in ~descendiente(m)$} &\multirow{2}{*}{F} & V si es descendiente por la izquierda & \multirow{2}{*}{V}\\
-~                       &~  & y F si lo es por la derecha}&  \\\hline
-$n\in ~ancestro(m)$ & V & igual que antes & F \\\hline
+$n\in ~descendiente(m)$ & F & V si es descendiente por la izquierda & V \\
+~                       &~  & y F si lo es por la derecha &  \\ \hline
+$n\in ~ancestro(m)$ & V & igual que antes & F \\ \hline
 \end{tabular} 
-\end{table}\\[0.5cm]
+% \end{table}\\[0.5cm]
 
 \noindent
 Dados el preorden y el inorden, obtén el correspondiente árbol binario:
@@ -5522,9 +5522,9 @@ void Reflejo (info_nodo<T>* n) {
 Todo lo que hemos implementado hasta ahora corresponde a la parte private de la clase. El atributo privado de la clase es un puntero a info\_nodo que corresponde con la raíz del árbol. Dentro de la clase ArbolBinario tenemos la clase nodo, que es una especie de iterador detro del árbol, cuyo atributo privado es un puntero a info\_nodo.
 En la implementación de la clase se usa varias veces un typename, si no recuerdas lo que es, se estudió en la \hyperref[typename]{seccion \ref*{typename}}. En particular usaremos: \\ 
  
- {\centering\fbox{$typename~~ArbolBinario<T>::nodo$}\par}\\ 
+ {\centering\fbox{$typename~~ArbolBinario<T>::nodo$}\par}~\\ 
 
- \\Es necesario anteponer  {\it typename}, en primer lugar porque ArbolBinario es una clase template. Y 
+Es necesario anteponer  {\it typename}, en primer lugar porque ArbolBinario es una clase template. Y 
 además al hacer referencia a nodo, si no ponemos la palabra clave {\it typename} el compilador, el tipo nodo,  lo interpreta como un objeto miembro y no como un tipo.
 
 Las implementaciones de los métodos de la clase ArbolBinario serían:
