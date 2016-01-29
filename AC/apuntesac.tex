@@ -883,13 +883,21 @@ Siendo:
 \end{enumerate}
 
 \textcolor[rgb]{0.2,0.4,0.8}{\subsubsection{Ley de Amdahl}}
-La mejora de la velocidad, $S$, que se puede obtener cuando se mejora un recurso de un máquina en un factor $p$ está limitada por:
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{113}
+    \caption{Tiempo original vs tiempo mejorado}
+    \label{tiempos}
+\end{figure}
+
+La mejora de la velocidad, $S$, que se puede obtener cuando se mejora un recurso de una máquina en un factor $p$ (o $k$ según la \hyperref[tiempos]{Figura \ref*{tiempos}}) está limitada por:
 
 \begin{displaymath}
 S \leq \frac{p}{1+f(p-1)}
 \end{displaymath}
 
-donde $f$ es la fracción del sistema que utiliza la mejora, y $p$ indica en cuanto se consigue mejorar esa fracción.
+donde $f$ es la fracción del sistema que utiliza la mejora, y $p$ indica en cuanto se consigue mejorar esa fracción. 
 
 Por ejemplo: si un programa pasa un $25\%$ de su tiempo de ejecución en una máquina realizando instrucciones de coma flotante, y se mejora la máquina haciendo que estas instrucciones se ejecuten en la mitad de tiempo, entonces $p=2$, $f=0.75$ y:
 
@@ -901,37 +909,69 @@ S \leq \frac{2}{1+0.75} = 1.14
 \framebox[1.1\width]{Hay que mejorar el caso más frecuente (lo que más se usa)} \par
 \end{center}
 
-Para deducir esta ecuación tenemos que tener en cuenta que:
+Para deducir esta ecuación debemos partir del \textit{\textcolor{azul}{speedup}} obtenido al cambiar el componente. 
+
+El tiempo sin mejorar sería:
 
 \begin{displaymath}
-T_1 = f \cdot T_1 + (1 - f)T_1
-\end{displaymath}
-\begin{displaymath}
-T_p \geq f \cdot T_1 + \frac{(1-f)T_1}{p}
+    T_{original} = f \cdot T_{original} + (1-f)\cdot T_{original}
 \end{displaymath}
 
-Y sustituir estos valores en la ecuación de la ganancia de velocidad:
+y el tiempo mejorado al aplicar el factor $p$ sería:
 
 \begin{displaymath}
-S = \frac{T_1}{T_p} = \frac{f \cdot T_1 + (1 - f)T_1}{f \cdot T_1 + \frac{(1 - f)T_1}{p}} = 
+    T_{mejorado} = f \cdot T_{original} + \frac{(1-f) \cdot T_{original}}{p}
 \end{displaymath}
 
-Sacamos factor común de $T_1$ y hacemos mínimo común múltiplo:
+Y el \textcolor{azul}{\textit{speedup}} obtenido sería:
 
 \begin{displaymath}
-= \frac{T_1(f+1-f)}{T_1(f+\frac{1-f}{p})} = \frac{1}{f + \frac{1 - f}{p}} = \frac{1}{\frac{fp + 1 - f}{p}} = \frac{p}{fp + 1 - f} =
+    S = \frac{T_{original}}{T_{mejorado}} = \frac{T_{original}}{f \cdot T_{original} + \frac{(1-f)\cdot T_{original}}{p}} = \frac{T_{original}}{T_{original}} \cdot \Bigg(\frac{1}{f + \frac{1-f}{p}} \Bigg)  = \frac{1}{f + \frac{1-f}{p}} = \frac{p}{1 + f\cdot(p-1)}
 \end{displaymath}
 
-Ahora dividimos todos los miembros entre $f$
-\begin{displaymath}
-\frac{\frac{p}{f}}{\frac{fp}{f}+\frac{1}{f}-{f}{f}} = \frac{\frac{p}{f}}{p+\frac{1}{f}-1} = \frac{\frac{p}{f}}{(p-1)+\frac{1}{f}} =
-\end{displaymath}
-
-Quitamos las $f$:
+Otra forma de ver esta ley es la siguiente: tenemos un componente que, para un determinado programa, se utiliza una fracción $f$ de tiempo, ¿cómo mejora el tiempo de ejecución del programa al cambiar dicho componente por otro $p$ veces más rápido?
 
 \begin{displaymath}
-= \frac{\frac{p}{f}}{\frac{(p-1)f + 1}{f}} = \frac{p}{(p-1)f + 1}
+    T_{mejorado} = (1 - f) \cdot T_{original} + \frac{f \cdot T_{original}}{p}
 \end{displaymath}
+
+Para deducirla, hacemos el \textit{\textcolor{azul}{speedup}} como antes:
+
+\begin{displaymath}
+    S = \frac{T_{original}}{T_{mejorado}} = \frac{T_{original}}{(1-f)\cdot T_{original} + \frac{f \cdot T_{original}}{p}} = \frac{1}{1 - f + \frac{f}{p}}
+\end{displaymath}
+
+La mejora sólo se verá afectada por la fracción de tiempo que utiliza dicho recurso, lo demás no varía (\hyperref[tiempos]{Figura \ref*{tiempos}}). Por tanto, cuando $f=0$ no hay ninguna mejora y cuando $f=1$ el tiempo de ejecución mejora $k$ veces, igual que el componente.
+
+% \begin{displaymath}
+% T_1 = f \cdot T_1 + (1 - f)T_1
+% \end{displaymath}
+% \begin{displaymath}
+% T_p \geq f \cdot T_1 + \frac{(1-f)T_1}{p}
+% \end{displaymath}
+
+% Y sustituir estos valores en la ecuación de la ganancia de velocidad:
+
+% \begin{displaymath}
+% S = \frac{T_1}{T_p} = \frac{f \cdot T_1 + (1 - f)T_1}{f \cdot T_1 + \frac{(1 - f)T_1}{p}} = 
+% \end{displaymath}
+
+% Sacamos factor común de $T_1$ y hacemos mínimo común múltiplo:
+
+% \begin{displaymath}
+% = \frac{T_1(f+1-f)}{T_1(f+\frac{1-f}{p})} = \frac{1}{f + \frac{1 - f}{p}} = \frac{1}{\frac{fp + 1 - f}{p}} = \frac{p}{fp + 1 - f} =
+% \end{displaymath}
+
+% Ahora dividimos todos los miembros entre $f$
+% \begin{displaymath}
+% \frac{\frac{p}{f}}{\frac{fp}{f}+\frac{1}{f}-{f}{f}} = \frac{\frac{p}{f}}{p+\frac{1}{f}-1} = \frac{\frac{p}{f}}{(p-1)+\frac{1}{f}} =
+% \end{displaymath}
+
+% Quitamos las $f$:
+
+% \begin{displaymath}
+% = \frac{\frac{p}{f}}{\frac{(p-1)f + 1}{f}} = \frac{p}{(p-1)f + 1}
+% \end{displaymath}
 
 En relación con la eficacia de los computadores paralelos, la ley de Amdahl dice que dado que en un programa hay código secuencial que no puede paralelizarse, los procesadores no se podrían utilizar eficazmente.
 
