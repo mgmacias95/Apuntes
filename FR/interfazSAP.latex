@@ -1,0 +1,61 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(5280,3774)(2386,-3673)
+{\color[rgb]{0,0,1}\thinlines
+\put(5401,-1561){\circle*{212}}
+}%
+{\color[rgb]{0,0,1}\put(4377,-2311){\framebox(600,300){}}
+}%
+{\color[rgb]{0,0,1}\put(3976,-1186){\framebox(900,450){}}
+}%
+{\color[rgb]{0,0,0}\put(3601, 89){\line( 0,-1){3750}}
+}%
+{\color[rgb]{0,0,0}\put(6601, 89){\line( 0,-1){3750}}
+}%
+{\color[rgb]{0,0,0}\put(3601,-436){\line( 1, 0){3000}}
+}%
+{\color[rgb]{0,0,0}\put(3601,-2686){\line( 1, 0){3000}}
+}%
+{\color[rgb]{0,0,0}\put(7501,-1561){\vector(-1, 0){675}}
+}%
+\thicklines
+{\color[rgb]{0,0,0}\put(3601,-1561){\line( 1, 0){3000}}
+}%
+\thinlines
+{\color[rgb]{0,0,0}\put(5401,-1336){\vector( 0,-1){525}}
+}%
+{\color[rgb]{0,0,0}\put(5926,-2011){\line( 1, 2){405}}
+}%
+{\color[rgb]{0,0,0}\put(4377,-2311){\framebox(1549,300){}}
+}%
+{\color[rgb]{0,0,0}\put(3976,-1186){\framebox(2325,450){}}
+}%
+{\color[rgb]{0,0,0}\put(3976,-1186){\line( 1,-2){375}}
+}%
+\put(2401,-886){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Capa N+1}%
+}}}}
+\put(2476,-2236){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Capa N}%
+}}}}
+\put(4726,-661){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}(N+1) - PDU}%
+}}}}
+\put(4126,-1036){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}(N+1)-H}%
+}}}}
+\put(5101,-1036){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}(N+1) - SDU}%
+}}}}
+\put(4576,-2236){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}N-H}%
+}}}}
+\put(5176,-2236){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}N-SDU}%
+}}}}
+\put(5551,-1411){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}SAP}%
+}}}}
+\put(4876,-2536){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}N-PDU}%
+}}}}
+\put(7651,-1561){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Interfaz}%
+}}}}
+\end{picture}%

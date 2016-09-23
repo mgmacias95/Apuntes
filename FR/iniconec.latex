@@ -1,0 +1,28 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(3399,6399)(3514,-6823)
+\thinlines
+{\color[rgb]{1,0,0}\put(3526,-436){\line( 0,-1){2925}}
+}%
+{\color[rgb]{1,0,0}\put(6376,-436){\line( 0,-1){2925}}
+}%
+{\color[rgb]{1,0,0}\put(3526,-736){\line( 5,-1){2855.769}}
+\put(6376,-1336){\line(-6,-1){2833.784}}
+}%
+{\color[rgb]{0,0,0}\put(6901,-6811){\makebox(1.6667,11.6667){\tiny.}}
+}%
+\thicklines
+{\color[rgb]{0,0,0}\put(3639,-1719){\line( 4,-1){2700}}
+\put(6339,-2394){\line( 0,-1){450}}
+\put(6339,-2844){\line(-4, 1){2788.235}}
+\put(3564,-2094){\line( 0, 1){375}}
+}%
+\put(4126,-586){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Inicio de Conexion}%
+}}}}
+\end{picture}%

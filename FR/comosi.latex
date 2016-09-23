@@ -1,0 +1,258 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(6800,5265)(61,-4423)
+\thinlines
+{\color[rgb]{0,0,0}\put(5279,-164){\framebox(1504,502){}}
+}%
+{\color[rgb]{0,0,0}\put(5279,-666){\framebox(1504,502){}}
+}%
+{\color[rgb]{0,0,0}\put(5279,-1167){\framebox(1504,501){}}
+}%
+{\color[rgb]{0,0,0}\put(5279,-1669){\framebox(1504,502){}}
+}%
+{\color[rgb]{0,0,0}\put(5279,-2170){\framebox(1504,501){}}
+}%
+{\color[rgb]{0,0,0}\put(5279,-2671){\framebox(1504,501){}}
+}%
+{\color[rgb]{0,0,0}\put(5279,-3173){\framebox(1504,502){}}
+}%
+{\color[rgb]{0,0,0}\put(6219,-38){\framebox(438,250){}}
+}%
+{\color[rgb]{0,0,0}\put(5905,-1042){\framebox(752,251){}}
+}%
+{\color[rgb]{0,0,0}\put(6094,-791){\line( 0,-1){251}}
+}%
+{\color[rgb]{0,0,0}\put(5780,-1543){\framebox(877,250){}}
+}%
+{\color[rgb]{0,0,0}\put(5717,-2045){\framebox(940,251){}}
+}%
+{\color[rgb]{0,0,0}\put(1643,-1794){\line( 0,-1){251}}
+}%
+{\color[rgb]{0,0,0}\put(1455,-2045){\framebox(940,251){}}
+}%
+{\color[rgb]{0,0,0}\put(1705,-1293){\line( 0,-1){250}}
+}%
+{\color[rgb]{0,0,0}\put(1518,-1543){\framebox(877,250){}}
+}%
+{\color[rgb]{0,0,0}\put(1643,-1042){\framebox(752,251){}}
+}%
+{\color[rgb]{0,0,0}\put(1831,-791){\line( 0,-1){251}}
+}%
+{\color[rgb]{0,0,0}\put(1956,-38){\framebox(439,250){}}
+}%
+\put(1518,714){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Host}%
+}}}}
+\put(1392,525){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Emisor}%
+}}}}
+{\color[rgb]{0,0,0}\put(1016,-164){\framebox(1504,502){}}
+}%
+{\color[rgb]{0,0,0}\put(1016,-666){\framebox(1504,502){}}
+}%
+{\color[rgb]{0,0,0}\put(1016,-1167){\framebox(1504,501){}}
+}%
+{\color[rgb]{0,0,0}\put(1016,-1669){\framebox(1504,502){}}
+}%
+{\color[rgb]{0,0,0}\put(1016,-2170){\framebox(1504,501){}}
+}%
+{\color[rgb]{0,0,0}\put(1016,-2671){\framebox(1504,501){}}
+}%
+{\color[rgb]{0,0,0}\put(1016,-3173){\framebox(1504,502){}}
+}%
+{\color[rgb]{0,0,0}\put(2208,212){\line( 0,-1){250}}
+}%
+{\color[rgb]{0,0,0}\put(2333,-38){\vector( 0,-1){251}}
+}%
+{\color[rgb]{0,0,0}\put(1956,-289){\line( 0,-1){251}}
+}%
+{\color[rgb]{0,0,0}\put(1768,-540){\framebox(627,251){}}
+}%
+{\color[rgb]{0,0,0}\put(2270,-540){\vector( 0,-1){251}}
+}%
+{\color[rgb]{0,0,0}\put(2270,-1042){\vector( 0,-1){251}}
+}%
+{\color[rgb]{0,0,0}\put(2270,-1543){\vector( 0,-1){251}}
+}%
+{\color[rgb]{0,0,0}\put(2270,-2045){\vector( 0,-1){250}}
+}%
+{\color[rgb]{0,0,0}\put(1142,-2546){\framebox(1253,251){}}
+}%
+{\color[rgb]{0,0,0}\put(1392,-2295){\line( 0,-1){251}}
+}%
+{\color[rgb]{0,0,0}\put(1142,-3047){\framebox(1253,250){}}
+}%
+{\color[rgb]{0,0,0}\put(2270,-2546){\vector( 0,-1){251}}
+}%
+{\color[rgb]{0,0,0}\put(2709,-3173){\framebox(2319,1504){}}
+}%
+{\color[rgb]{0,0,0}\put(2896,-3047){\framebox(941,1191){}}
+}%
+{\color[rgb]{0,0,0}\put(3147,-2108){\framebox(627,189){}}
+}%
+{\color[rgb]{0,0,0}\put(3085,-2484){\framebox(689,189){}}
+}%
+{\color[rgb]{0,0,0}\put(2960,-2985){\framebox(814,188){}}
+}%
+{\color[rgb]{0,0,0}\put(3210,-2295){\line( 0,-1){189}}
+}%
+{\color[rgb]{0,0,0}\put(3272,-1919){\line( 0,-1){189}}
+}%
+{\color[rgb]{0,0,0}\put(4025,-2985){\framebox(752,188){}}
+}%
+{\color[rgb]{0,0,0}\put(4151,-2484){\framebox(626,189){}}
+}%
+{\color[rgb]{0,0,0}\put(4276,-2295){\line( 0,-1){189}}
+}%
+{\color[rgb]{0,0,0}\put(2458,-1982){\vector(-1, 0){  0}}
+\put(2458,-1982){\vector( 1, 0){564}}
+}%
+{\color[rgb]{0,0,0}\put(2458,-2421){\vector(-1, 0){  0}}
+\put(2458,-2421){\vector( 1, 0){564}}
+}%
+{\color[rgb]{0,0,0}\put(2458,-2922){\vector(-1, 0){  0}}
+\put(2458,-2922){\vector( 1, 0){438}}
+}%
+{\color[rgb]{0,0,0}\put(3837,-2045){\vector(-1, 0){  0}}
+\put(3837,-2045){\vector( 1, 0){501}}
+}%
+{\color[rgb]{0,0,0}\put(3837,-2421){\vector(-1, 0){  0}}
+\put(3837,-2421){\vector( 1, 0){250}}
+}%
+{\color[rgb]{0,0,0}\put(3837,-2922){\vector(-1, 0){  0}}
+\put(3837,-2922){\vector( 1, 0){188}}
+}%
+{\color[rgb]{0,0,0}\put(2270,-3047){\vector( 0,-1){314}}
+}%
+{\color[rgb]{0,0,0}\put(2270,-3361){\line( 1, 0){1253}}
+}%
+{\color[rgb]{0,0,0}\put(3523,-3361){\vector( 0, 1){314}}
+}%
+{\color[rgb]{0,0,0}\put(3523,-2797){\vector( 0, 1){313}}
+}%
+{\color[rgb]{0,0,0}\put(3523,-2295){\vector( 0, 1){187}}
+}%
+{\color[rgb]{0,0,0}\put(3523,-1919){\vector( 0, 1){376}}
+}%
+{\color[rgb]{0,0,0}\put(3523,-1543){\line( 1, 0){1066}}
+}%
+{\color[rgb]{0,0,0}\put(4589,-1543){\vector( 0,-1){376}}
+}%
+{\color[rgb]{0,0,0}\put(3962,-3047){\framebox(877,1191){}}
+}%
+{\color[rgb]{0,0,0}\put(4338,-2108){\framebox(439,189){}}
+}%
+{\color[rgb]{0,0,0}\put(4463,-1919){\line( 0,-1){189}}
+}%
+{\color[rgb]{0,0,0}\put(4652,-2108){\vector( 0,-1){187}}
+}%
+{\color[rgb]{0,0,0}\put(4652,-2484){\vector( 0,-1){313}}
+}%
+{\color[rgb]{0,0,0}\put(4652,-2985){\vector( 0,-1){313}}
+}%
+{\color[rgb]{0,0,0}\put(6407,212){\line( 0,-1){250}}
+}%
+{\color[rgb]{0,0,0}\put(6031,-540){\framebox(626,251){}}
+}%
+{\color[rgb]{0,0,0}\put(6219,-540){\line( 0, 1){251}}
+}%
+{\color[rgb]{0,0,0}\put(5905,-1543){\line( 0, 1){250}}
+}%
+{\color[rgb]{0,0,0}\put(5905,-1794){\line( 0,-1){251}}
+}%
+{\color[rgb]{0,0,0}\put(5404,-2546){\framebox(1253,251){}}
+}%
+{\color[rgb]{0,0,0}\put(5591,-2295){\line( 0,-1){251}}
+}%
+{\color[rgb]{0,0,0}\put(5404,-3047){\framebox(1253,250){}}
+}%
+{\color[rgb]{0,0,0}\put(4652,-3298){\line( 1, 0){1880}}
+}%
+{\color[rgb]{0,0,0}\put(6532,-3298){\vector( 0, 1){251}}
+}%
+{\color[rgb]{0,0,0}\put(6532,-2797){\vector( 0, 1){251}}
+}%
+{\color[rgb]{0,0,0}\put(6532,-2295){\vector( 0, 1){250}}
+}%
+{\color[rgb]{0,0,0}\put(6532,-1794){\vector( 0, 1){251}}
+}%
+{\color[rgb]{0,0,0}\put(6532,-1293){\vector( 0, 1){251}}
+}%
+{\color[rgb]{0,0,0}\put(6532,-791){\vector( 0, 1){251}}
+}%
+{\color[rgb]{0,0,0}\put(6532,-352){\vector( 0, 1){314}}
+}%
+\put( 76, 24){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Aplicacion}%
+}}}}
+\put( 76,-477){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Presentacion}%
+}}}}
+\put(390,-979){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Sesion}%
+}}}}
+\put( 76,-1480){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Transporte}%
+}}}}
+\put(577,-1919){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Red}%
+}}}}
+\put(390,-2484){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Enlace}%
+}}}}
+\put(390,-2985){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Fisica}%
+}}}}
+\put(5905,714){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Host}%
+}}}}
+\put(5717,525){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Receptor}%
+}}}}
+\put(6846, 87){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Aplicacion}%
+}}}}
+\put(6846,-477){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Presentacion}%
+}}}}
+\put(6846,-917){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Sesion}%
+}}}}
+\put(6846,-1418){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Transporte}%
+}}}}
+\put(6846,-1919){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Red}%
+}}}}
+\put(6846,-2421){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Enlace}%
+}}}}
+\put(6846,-2922){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Fisica}%
+}}}}
+{\color[rgb]{0,0,0}\put(1299,-3660){\vector( 0,-1){231}}
+}%
+{\color[rgb]{0,0,0}\put(1415,-3891){\vector( 0, 1){231}}
+}%
+{\color[rgb]{0,0,0}\put(1299,-4295){\framebox(174,231){}}
+}%
+{\color[rgb]{0,0,0}\put(3901,-3718){\vector(-1, 0){  0}}
+\put(3901,-3718){\vector( 1, 0){463}}
+}%
+{\color[rgb]{0,0,0}\put(1126,-4411){\framebox(5550,809){}}
+}%
+{\color[rgb]{0,0,0}\put(3843,-4007){\line( 0,-1){231}}
+}%
+{\color[rgb]{0,0,0}\put(3728,-4238){\framebox(578,231){}}
+}%
+\put(1531,-3833){\makebox(0,0)[lb]{\smash{{\SetFigFont{9}{10.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Comunicacion real o vertical}%
+}}}}
+\put(1531,-4180){\makebox(0,0)[lb]{\smash{{\SetFigFont{9}{10.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Datos suplementarios (cabecera)}%
+}}}}
+\put(4421,-3775){\makebox(0,0)[lb]{\smash{{\SetFigFont{9}{10.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Comunicacion virtual u horizontal}%
+}}}}
+\put(3959,-4180){\makebox(0,0)[lb]{\smash{{\SetFigFont{9}{10.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}SDU}%
+}}}}
+\put(4421,-4180){\makebox(0,0)[lb]{\smash{{\SetFigFont{9}{10.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}PDU (=Cabecera + SDU)}%
+}}}}
+{\color[rgb]{0,0,0}\put(2476, 89){\vector(-1, 0){  0}}
+\put(2476, 89){\vector( 1, 0){2700}}
+}%
+{\color[rgb]{0,0,0}\put(2626,-436){\vector(-1, 0){  0}}
+\put(2626,-436){\vector( 1, 0){2550}}
+}%
+{\color[rgb]{0,0,0}\put(2551,-886){\vector(-1, 0){  0}}
+\put(2551,-886){\vector( 1, 0){2625}}
+}%
+{\color[rgb]{0,0,0}\put(2551,-1411){\vector(-1, 0){  0}}
+\put(2551,-1411){\vector( 1, 0){2700}}
+}%
+\end{picture}%

@@ -17,6 +17,7 @@ make clean
 * Apuntes ED - Curso 2014/2015 - Corregidos por la profesora __Rosa Rodríguez Sánchez__
 * Apuntes FBD - Curso 2014/2015
 * Apuntes AC - Curso 2014/2015
+* Apuntes FR - Curso 2015/2016
 * Compilador de LaTeX y minted para SublimeText
 
 ### Licencia

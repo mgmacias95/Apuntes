@@ -1,4 +1,4 @@
-all: fbd ed ac ies
+all: fbd ed ac ies fr
 
 ies: 
 	make -C ./IES/parcial1
@@ -11,7 +11,10 @@ ed:
 	make -C ./ED
 
 ac:
-	make -C ./AC 
+	make -C ./AC
+
+fr:
+	make -C ./FR
 
 clean:
 	make clean -C ./FBD
@@ -19,3 +22,4 @@ clean:
 	make clean -C ./AC 
 	make clean -C ./IES/parcial1
 	make clean -C ./IES/parcial2
+	make clean -C ./FR

@@ -1,0 +1,69 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(4827,3127)(1186,-2473)
+\thinlines
+{\color[rgb]{0,0,0}\put(1201, 10){\framebox(2400,329){}}
+}%
+{\color[rgb]{0,0,0}\put(3601, 10){\framebox(2400,329){}}
+}%
+{\color[rgb]{0,0,0}\put(1201,-1857){\framebox(4800,2196){}}
+}%
+{\color[rgb]{0,0,0}\put(1201,-319){\framebox(4800,329){}}
+}%
+{\color[rgb]{0,0,0}\put(1201,-649){\framebox(4800,330){}}
+}%
+{\color[rgb]{0,0,0}\put(1201,-978){\framebox(1200,329){}}
+}%
+{\color[rgb]{0,0,0}\put(2401,-978){\framebox(1200,329){}}
+}%
+{\color[rgb]{0,0,0}\put(3601,-978){\framebox(2400,329){}}
+}%
+{\color[rgb]{0,0,0}\put(1201,-1308){\framebox(4800,330){}}
+}%
+{\color[rgb]{0,0,0}\put(1201,-2132){\framebox(1200,275){}}
+}%
+{\color[rgb]{0,0,0}\put(2401,-2132){\framebox(1200,275){}}
+}%
+{\color[rgb]{0,0,0}\put(3601,-2132){\framebox(2400,275){}}
+}%
+{\color[rgb]{0,0,0}\put(1201,-2461){\framebox(4800,329){}}
+}%
+\put(1201,504){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}0}%
+}}}}
+\put(2401,504){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}8}%
+}}}}
+\put(3526,504){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}16}%
+}}}}
+\put(5851,504){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}31}%
+}}}}
+\put(1801,175){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Campo fijo 1}%
+}}}}
+\put(4276,175){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Campo fijo 2}%
+}}}}
+\put(3076,-155){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Campo 3}%
+}}}}
+\put(3076,-484){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Campo 4}%
+}}}}
+\put(1426,-814){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Trozo 1}%
+}}}}
+\put(2551,-814){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Trozo 1}%
+}}}}
+\put(4051,-814){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Trozo 1 Longitud}%
+}}}}
+\put(2926,-1198){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Trozo 1 Datos}%
+}}}}
+\put(1351,-2022){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Trozo N}%
+}}}}
+\put(2626,-2022){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Trozo N}%
+}}}}
+\put(3976,-2022){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Trozo N Longitud}%
+}}}}
+\put(2701,-2296){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Trozo N Datos}%
+}}}}
+\end{picture}%
