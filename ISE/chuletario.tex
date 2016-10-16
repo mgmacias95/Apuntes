@@ -1,0 +1,240 @@
+\documentclass[10pt,spanish, landscape, twocolumn]{article}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+% \usepackage{amsmath, amsthm}
+\usepackage{amsfonts, amssymb, latexsym}
+\usepackage{enumerate}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{colortbl}
+\usepackage[landscape]{geometry}
+\usepackage{minted}
+
+\usepackage[bookmarks=true,
+            bookmarksnumbered=false, % true means bookmarks in
+                                     % left window are numbered
+            bookmarksopen=false,     % true means only level 1
+                                     % are displayed.
+            colorlinks=true,
+            linkcolor=webblue]{hyperref}
+\definecolor{webgreen}{rgb}{0, 0.5, 0} % less intense green
+\definecolor{webblue}{rgb}{0, 0, 0.5}  % less intense blue
+\definecolor{webred}{rgb}{0.5, 0, 0}   % less intense red
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+%Definimos autor y título
+\title{Formulario ISE}
+\author{Marta Gómez}
+
+\begin{document}
+
+% \section{Tema 3}
+% \subsection{Tiempo de ejecución}
+% \begin{enumerate}[$\bullet$]
+%     \item \textbf{Tiempo de ejecución}
+%     \begin{displaymath}
+%         T_{EJEC} = NI \cdot CPI \cdot T_{RELOJ} = \frac{NI \cdot CPI}{f_{RELOJ}}
+%     \end{displaymath}
+
+%     \item \textbf{MIPS}
+%     \begin{displaymath}
+%         MIPS = \frac{NI}{T_{EJEC} \cdot 10^6} = \frac{f_{RELOJ}}{CPI \cdot 10^6}
+%     \end{displaymath}
+
+%     \item \textbf{MIPS Relativos}
+%     \begin{displaymath}
+%         MIPS_{relativos} = \frac{T_{EJEC~MAQUINA~REF}}{T_{EJEC}} \cdot MIPS_{MAQUINA~REF}
+%     \end{displaymath}
+
+%     \item \textbf{MFLOPS}
+%     \begin{displaymath}
+%         MFLOPS = \frac{Operaciones~de~coma~flotante}{T_{EJEC}\cdot 10^6}
+%     \end{displaymath}
+% \end{enumerate}
+
+% \newpage
+
+\section{Tema 4}
+\subsection{Conceptos básicos}
+\begin{enumerate}[$\bullet$]
+    \item $W$, \textbf{Tiempo de espera en cola} o \textit{waiting time}
+    \item $S$, \textbf{Tiempo de servicio} o \textit{service time}
+    \begin{displaymath}
+        S_i = \frac{B_i}{C_i}
+    \end{displaymath}
+    \item $R$, \textbf{Tiempo de respuesta de la estación de servicio} o \textit{response time}
+    \begin{displaymath}
+        R = W + S     
+    \end{displaymath}
+    \item $Z$, \textbf{Tiempo de reflexión} o \textit{think time} (sólo en redes cerradas)
+    \item $N$, \textbf{Número de trabajos}, incluye tanto en la cola como en el recurso
+    \begin{displaymath}
+        N_0 = X_0 \cdot R_0
+    \end{displaymath}
+    \item $N_T$, \textbf{Número de trabajos total} (sólo en redes cerradas)
+    \begin{displaymath}
+        N_T = N_Z + N_0 = X_0 \cdot Z + X_0 \cdot R_0 = X_0 \cdot (Z + R_0)
+    \end{displaymath}
+    \begin{enumerate}[$\longrightarrow$]
+        \item En red cerrada tipo batch
+        \begin{displaymath}
+            N_T = N_0
+        \end{displaymath}
+        \item En red cerrada tipo interactivo
+        \begin{displaymath}
+            N_T = N_0 + N_Z
+        \end{displaymath}
+    \end{enumerate}
+    \item $N_Z$, \textbf{Número de trabajos en reflexión} (sólo en redes cerradas)
+    \begin{displaymath}
+        N_Z = X_0 \cdot Z
+    \end{displaymath}
+    \item $T$, \textbf{Duración del periodo de medida}
+    \item $A$, \textbf{Número de trabajos solicitados} o \textit{arrivals}
+    \item $C$, \textbf{Número de trabajos completados} o \textit{completions}
+    \item $B_i$, \textbf{Tiempo que un dispositivo está ocupado} o \textit{busy time}
+    \item $\lambda$, \textbf{Tasa de llegada} o \textit{arrival rate}
+    \begin{displaymath}
+        \lambda_i = \frac{A_i}{T}
+    \end{displaymath}
+    \item $\tau$, \textbf{Tiempo medio entre llegadas} o \textit{interarrival time}
+    \begin{displaymath}
+        \tau_i = \frac{1}{\lambda_i} = \frac{T}{A_i}
+    \end{displaymath}
+    \item $X$, \textbf{Productividad} o \textit{throughput}
+    \begin{displaymath}
+        X_i = \frac{C_i}{T}
+    \end{displaymath}
+    \item $Q_i$, \textbf{Número medio de trabajos en cola} o \textit{jobs in queue}
+    \item $U$, \textbf{Número medio de trabajos servidos} y \textbf{utilización}
+    \begin{displaymath}
+        U_i = N_i - Q_i = \frac{B_i}{T}
+    \end{displaymath}
+    \item $V$, \textbf{Razón de visita} o \textit{visit ratio}
+    \begin{displaymath}
+        V_i = \frac{C_i}{C_0}
+    \end{displaymath}
+    \item $D$, \textbf{Demanda de servicio} o \textit{service demand}
+    \begin{displaymath}
+        D_i = \frac{B_i}{C_0} = V_i \cdot S_i
+    \end{displaymath}
+\end{enumerate}
+
+\newpage
+\subsection{Leyes operacionales}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Hipótesis del equilibrio de flujo}
+    \begin{displaymath}
+        A_0 \approx C_0 \qquad\ \lambda_0 \approx X_0 \qquad\ \frac{| A_i - C_i |}{C_i} \approx 0
+    \end{displaymath}
+
+    \item \textbf{Ley de Little}
+    \begin{displaymath}
+        N_0 = \lambda_0 \cdot R_0 \underbrace{= X_0 \cdot R_0}_{no ~ saturado} \qquad\ \underbrace{Q_i = \lambda_i \cdot W_i = X_i \cdot W_i}_{cola ~ dispositivo}
+    \end{displaymath}
+
+    \item \textbf{Ley de la Utilización}
+    \begin{displaymath}
+        U_i = \frac{B_i}{T} = \frac{C_i}{T} \cdot \frac{B_i}{C_i} = X_i \cdot S_i \underbrace{= \lambda_i \cdot S_i}_{no ~ saturado}
+    \end{displaymath}
+
+    \item \textbf{Ley del flujo forzado}
+    \begin{displaymath}
+        V_i = \frac{C_i}{C_0} = \frac{X_i}{X_0} \qquad\ \Longrightarrow \qquad\ X_i = X_0 \cdot V_i
+    \end{displaymath}
+    \begin{displaymath}
+        U_i = X_i \cdot S_i = X_0 \cdot V_i \cdot S_i = X_0 \cdot D_i = \lambda_0 \cdot D_i
+    \end{displaymath}
+
+    \item \textbf{Ley general del tiempo de respuesta}
+    \begin{displaymath}
+        R_0 = \sum_{i=1}^K V_i \cdot R_i
+    \end{displaymath}
+
+    \item \textbf{Ley del tiempo de respuesta interactivo}
+    \begin{displaymath}
+        R_0 = \frac{N_T}{X_0} - Z
+    \end{displaymath}
+\end{enumerate}
+
+\newpage
+\subsection{Límites optimistas del rendimiento}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Productividad máxima}
+    \begin{displaymath}
+        X_0^{max} = \frac{1}{D_b}
+    \end{displaymath}
+
+    \item \textbf{Tiempo de respuesta mínimo}
+    \begin{displaymath}
+        R_0^{min} = \sum_{i=1}^K V_i \cdot S_i = \sum_{i=1}^K D_i \equiv D \qquad\ \textrm{Porque $R_i^{min} = S_i$}
+    \end{displaymath}
+\end{enumerate}
+
+\subsubsection{En redes cerradas}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Tiempo de respuesta}, dependendiendo de si hay mucha carga o poca
+    \begin{displaymath}
+        R_0 \geq max \{D, N_T \cdot D_b - Z\}
+    \end{displaymath}
+
+    \item \textbf{Productividad}, dependendiendo de si hay mucha carga o poca
+    \begin{displaymath}
+        X_0 \leq min \Bigg \{ \frac{N_T}{D + Z}, \frac{1}{D_b} \Bigg\}
+    \end{displaymath}
+
+    \item \textbf{Punto teórico de saturación}
+    \begin{displaymath}
+        D = N_T^* \cdot D_b - Z \qquad\ \Longrightarrow \qquad\ N_T^* = \frac{D+Z}{D_b}
+    \end{displaymath}
+\end{enumerate}
+
+\newpage
+\subsection{Resolución de redes de colas}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{Tiempo de respuesta medio}
+    \begin{displaymath}
+        R_i = N_i \cdot S_i + S_i = (N_i + 1) \cdot S_i = (X_i \cdot R_i + 1) \cdot S_i = X_i \cdot S_i \cdot R_i + S_i
+    \end{displaymath}
+    \begin{displaymath}
+        R_i - X_i \cdot S_i \cdot R_i = S_i \qquad\ \Longrightarrow \qquad\ R_i \cdot (1 - X_i \cdot S_i) = S_i
+    \end{displaymath}
+    \begin{displaymath}
+        R_i = \frac{S_i}{1 - X_i \cdot S_i} = \frac{S_i}{1 - U_i} = \frac{S_i}{1 - X_0 \cdot D_i}
+    \end{displaymath}
+
+    \item \textbf{Modelos abiertos}
+    \begin{enumerate}[1.]
+        \item Calcular demanda de servicio de cada estación
+        \begin{displaymath}
+            D_i = V_i \cdot S_i
+        \end{displaymath}
+        \item Calcular tiempo de respuesta de cada estación
+        \begin{displaymath}
+            R_i = \frac{S_i}{1 - X_0 \cdot D_i} = \frac{S_i}{1 - \lambda_0 \cdot D_i}
+        \end{displaymath}
+        \item Calcular tiempo de respuesta del servidor
+        \begin{displaymath}
+            R_0 = \sum_{i=1}^K V_i \cdot R_i = \sum_{i=1}^K \frac{V_i \cdot S_i}{1 - \lambda_0 \cdot D_i} = \sum_{i=1}^K \frac{D_i}{1 - \lambda_0 \cdot D_i}
+        \end{displaymath}
+        \item Calcular resto de valores de forma normal
+    \end{enumerate}
+\end{enumerate}
+
+\newpage
+\subsection{\texttt{solvenet}}
+\begin{minted}{text}
+Usage: solvenet [0|1] [lambda0 | NT Z] K S1 V1...SK VK
+    With no parameters, shows this message
+    network: 0 (open) and 1 (closed)
+    lambda0: arrival rate = throughput (only open networks)
+    NT:      total number of jobs in the net (only closed networks)
+    Z:       think time (only interactive closed networks)
+    K:       number of service stations
+    Si:      service time of device i
+    Vi:      ratio visit of device i    
+\end{minted}
+
+\end{document}
