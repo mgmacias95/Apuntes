@@ -18,6 +18,7 @@ make clean
 * Apuntes FBD - Curso 2014/2015
 * Apuntes AC - Curso 2014/2015
 * Apuntes FR - Curso 2015/2016
+* Chuleta de fórmulas para ISE - Curso 2015/2016
 * Compilador de LaTeX y minted para SublimeText
 
 ### Licencia
