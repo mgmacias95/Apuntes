@@ -15,6 +15,7 @@ make clean
 ### Contenido
 * Apuntes IES - Curso 2013/2014
 * Apuntes ED - Curso 2014/2015 - Corregidos por la profesora __Rosa Rodríguez Sánchez__
+* Apuntes ALG - Curso 2014/2015 - Aportados por [__Braulio Vargas López__](https://github.com/BraulioV)
 * Apuntes FBD - Curso 2014/2015
 * Apuntes AC - Curso 2014/2015
 * Apuntes FR - Curso 2015/2016
