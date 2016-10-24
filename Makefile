@@ -19,6 +19,9 @@ fr:
 ise:
 	make -C ./ISE
 
+alg:
+	make -C ./ALG
+
 clean:
 	make clean -C ./FBD
 	make clean -C ./ED 
