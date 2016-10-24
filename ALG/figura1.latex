@@ -1,0 +1,25 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(6440,2522)(1931,-4676)
+{\color[rgb]{0,0,0}\thinlines
+\put(5151,-3415){\oval(6424,2508)}
+}%
+{\color[rgb]{0,0,0}\put(3051,-3344){\oval(1102,572)}
+}%
+{\color[rgb]{0,0,0}\put(6901,-3430){\oval(1658,588)}
+}%
+\put(6226,-3511){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}NP - Completos}%
+}}}}
+\put(2701,-3436){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Clase P}%
+}}}}
+\put(4801,-3511){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}NP}%
+}}}}
+\put(4801,-2836){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Clase NP}%
+}}}}
+\end{picture}%

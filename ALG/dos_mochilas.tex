@@ -1,0 +1,15 @@
+\begin{enumerate}
+    \item Caso 1: no se coge $k$
+    \begin{dislaymath}
+    mochila(k,p_1,p_2,p_3) = mochila(k-1,p_1,p_2,p_3)
+    \end{dislaymath}
+
+    \item Caso 2, 3, 4: se coge $k$ y se echa en la mochila $i$:
+    \begin{displaymath}
+    mochila(k,p_1,p_2,p_3) = b_k + mochila(k-1, p_i-p_k, p_2, p_3)
+    \end{displaymath}
+\end{enumerate}
+
+Nos tenemos que quedar con la opción que más beneficio nos dé. 
+
+Los casos base serían $k = 0$ (no tenemos objetos para meter en la mochila) o $n = 0$ (no tenemos ninguna mochila) donde en ambos casos, el beneficio obtenido sería nulo.

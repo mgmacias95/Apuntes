@@ -1,0 +1,51 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(2874,1956)(5764,-2080)
+\thinlines
+{\color[rgb]{0,0,0}\put(5881,-1681){\oval(210,210)[bl]}
+\put(5881,-1216){\oval(210,210)[tl]}
+\put(6496,-1681){\oval(210,210)[br]}
+\put(6496,-1216){\oval(210,210)[tr]}
+\put(5881,-1786){\line( 1, 0){615}}
+\put(5881,-1111){\line( 1, 0){615}}
+\put(5776,-1681){\line( 0, 1){465}}
+\put(6601,-1681){\line( 0, 1){465}}
+}%
+{\color[rgb]{0,0,0}\put(7906,-1681){\oval(210,210)[bl]}
+\put(7906,-1216){\oval(210,210)[tl]}
+\put(8521,-1681){\oval(210,210)[br]}
+\put(8521,-1216){\oval(210,210)[tr]}
+\put(7906,-1786){\line( 1, 0){615}}
+\put(7906,-1111){\line( 1, 0){615}}
+\put(7801,-1681){\line( 0, 1){465}}
+\put(8626,-1681){\line( 0, 1){465}}
+}%
+{\color[rgb]{0,0,0}\put(6226,-1111){\line( 2, 1){990}}
+\put(7201,-586){\line( 2,-1){1050}}
+}%
+{\color[rgb]{0,0,0}\put(6706,-481){\oval(210,210)[bl]}
+\put(6706,-241){\oval(210,210)[tl]}
+\put(7696,-481){\oval(210,210)[br]}
+\put(7696,-241){\oval(210,210)[tr]}
+\put(6706,-586){\line( 1, 0){990}}
+\put(6706,-136){\line( 1, 0){990}}
+\put(6601,-481){\line( 0, 1){240}}
+\put(7801,-481){\line( 0, 1){240}}
+}%
+\put(6001,-1486){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0} A1}%
+}}}}
+\put(8101,-1486){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}A2}%
+}}}}
+\put(6001,-2011){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}f(n)}%
+}}}}
+\put(8101,-2011){\makebox(0,0)[lb]{\smash{{\SetFigFont{20}{24.0}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}g(n)}%
+}}}}
+\put(6676,-361){\makebox(0,0)[lb]{\smash{{\SetFigFont{14}{16.8}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Problema P}%
+}}}}
+\end{picture}%

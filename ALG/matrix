@@ -1,0 +1,65 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(4977,1374)(1189,-1573)
+\thinlines
+{\color[rgb]{0,0,0}\put(1201,-1561){\framebox(1350,1350){}}
+}%
+{\color[rgb]{0,0,0}\put(1876,-211){\line( 0,-1){1350}}
+}%
+{\color[rgb]{0,0,0}\put(1201,-886){\line( 1, 0){1350}}
+}%
+{\color[rgb]{0,0,0}\put(2851,-1561){\framebox(1350,1350){}}
+}%
+{\color[rgb]{0,0,0}\put(3526,-211){\line( 0,-1){1350}}
+}%
+{\color[rgb]{0,0,0}\put(2851,-886){\line( 1, 0){1350}}
+}%
+\put(3076,-586){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}B11}%
+}}}}
+\put(3751,-511){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}B12}%
+}}}}
+\put(3076,-1261){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}B21}%
+}}}}
+\put(3751,-1261){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}b22}%
+}}}}
+{\color[rgb]{0,0,0}\put(4651,-1561){\framebox(1350,1350){}}
+}%
+{\color[rgb]{0,0,0}\put(5326,-211){\line( 0,-1){1350}}
+}%
+{\color[rgb]{0,0,0}\put(4651,-886){\line( 1, 0){1350}}
+}%
+\put(4801,-586){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}C11}%
+}}}}
+\put(5551,-586){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}C12}%
+}}}}
+\put(4801,-1261){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}C21}%
+}}}}
+\put(5476,-1261){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}C22}%
+}}}}
+\put(6151,-811){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}C11 = A11xB11 + A12xB21}%
+}}}}
+\put(6151,-1006){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}C12 = A11xB12 + A12xB22}%
+}}}}
+\put(6151,-1201){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}C21 = A21xB11 + A22xB21}%
+}}}}
+\put(6151,-1396){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}C22 = A21xB12 + A22xB22}%
+}}}}
+\put(1351,-511){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}A11}%
+}}}}
+\put(1351,-1186){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}A21}%
+}}}}
+\put(2101,-511){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}A12}%
+}}}}
+\put(2101,-1186){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}A22}%
+}}}}
+\put(2701,-886){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}X}%
+}}}}
+\put(4426,-961){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}=}%
+}}}}
+\end{picture}%
