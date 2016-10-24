@@ -1,0 +1,31 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(3624,1827)(2389,-1951)
+\thinlines
+{\color[rgb]{0,0,0}\put(2401,-661){\framebox(3600,525){}}
+}%
+{\color[rgb]{0,0,0}\put(4126,-136){\line( 0,-1){525}}
+}%
+{\color[rgb]{0,0,0}\put(2401,-1411){\framebox(3600,525){}}
+}%
+{\color[rgb]{0,0,0}\put(4126,-886){\line( 0,-1){525}}
+}%
+\put(3151,-436){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}W}%
+}}}}
+\put(4876,-436){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}X}%
+}}}}
+\put(3076,-1186){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Y}%
+}}}}
+\put(4876,-1186){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}Z}%
+}}}}
+\put(3076,-1936){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}n/2}%
+}}}}
+\put(4951,-1861){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}n/2 = S}%
+}}}}
+\end{picture}%

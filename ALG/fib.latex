@@ -1,0 +1,51 @@
+\setlength{\unitlength}{3947sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(5649,3249)(2089,-2773)
+\thinlines
+{\color[rgb]{0,0,0}\put(4426,-211){\framebox(1050,675){}}
+}%
+{\color[rgb]{0,0,0}\put(4951,-211){\line(-5,-4){750}}
+}%
+{\color[rgb]{0,0,0}\put(4951,-211){\line( 1,-1){600}}
+}%
+{\color[rgb]{0,0,0}\put(3376,-1486){\framebox(1050,675){}}
+}%
+{\color[rgb]{0,0,0}\put(5476,-1486){\framebox(1050,675){}}
+}%
+{\color[rgb]{0,0,0}\put(3705,-1523){\line(-5,-4){750}}
+}%
+{\color[rgb]{0,0,0}\put(3713,-1523){\line( 1,-1){600}}
+}%
+{\color[rgb]{0,0,0}\put(6263,-1523){\line( 1,-1){600}}
+}%
+{\color[rgb]{0,0,0}\put(6233,-1495){\line(-5,-4){750}}
+}%
+{\color[rgb]{0,0,0}\put(2101,-2761){\framebox(1050,675){}}
+}%
+{\color[rgb]{0,0,0}\put(3901,-2761){\framebox(1050,675){}}
+}%
+{\color[rgb]{0,0,0}\put(5326,-2761){\framebox(1050,675){}}
+}%
+{\color[rgb]{0,0,0}\put(6676,-2761){\framebox(1050,675){}}
+}%
+\put(4651, 89){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}F(n)}%
+}}}}
+\put(3601,-1111){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}F(n-1)}%
+}}}}
+\put(5701,-1111){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}F(n-2)}%
+}}}}
+\put(2326,-2461){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}F(n-2)}%
+}}}}
+\put(4126,-2461){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}F(n-3)}%
+}}}}
+\put(5551,-2386){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}F(n-3)}%
+}}}}
+\put(6826,-2461){\makebox(0,0)[lb]{\smash{{\SetFigFont{12}{14.4}{\rmdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}F(n-4)}%
+}}}}
+\end{picture}%
