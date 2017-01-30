@@ -22,6 +22,9 @@ ise:
 alg:
 	make -C ./ALG
 
+rsc:
+	make -C ./RSC
+
 clean:
 	make clean -C ./FBD
 	make clean -C ./ED 

@@ -1,0 +1,937 @@
+\documentclass[10pt,spanish, landscape, twocolumn]{article}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsthm}
+\usepackage{amsfonts, amssymb, latexsym}
+\usepackage{enumerate}
+\usepackage[usenames, dvipsnames]{color}
+\usepackage{colortbl}
+\usepackage[landscape]{geometry}
+
+
+\usepackage[bookmarks=true,
+            bookmarksnumbered=false, % true means bookmarks in
+                                     % left window are numbered
+            bookmarksopen=false,     % true means only level 1
+                                     % are displayed.
+            colorlinks=true,
+            linkcolor=webblue]{hyperref}
+\definecolor{webgreen}{rgb}{0, 0.5, 0} % less intense green
+\definecolor{webblue}{rgb}{0, 0, 0.5}  % less intense blue
+\definecolor{webred}{rgb}{0.5, 0, 0}   % less intense red
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+%%%%% Para cambiar el tipo de letra en el título de la sección %%%%%%%%%%%
+\usepackage{sectsty}
+\sectionfont{\fontfamily{pag}\selectfont}
+\subsectionfont{\fontfamily{pag}\selectfont}
+\subsubsectionfont{\fontfamily{pag}\selectfont}
+
+\definecolor{temados}{rgb}{0.8, 0.0, 0.0}
+\definecolor{tematres}{rgb}{0.2, 0.2, 0.6}
+\definecolor{temacuatro}{rgb}{0.0, 0.62, 0.38}
+\definecolor{temacinco}{rgb}{0.93, 0.35, 0.0}
+\definecolor{temaseis}{rgb}{0.6, 0.4, 0.8}
+\definecolor{temasiete}{rgb}{0.0, 0.47, 0.75}
+
+%Definimos autor y título
+\title{Formulario RSC}
+\author{Marta Gómez}
+
+\begin{document}
+\renewcommand{\tablename}{Tabla}
+
+\section{\textcolor{temados}{Tema 2}}
+\subsection{\textcolor{temados}Componentes de un sistema complejo}
+\begin{enumerate}[\color{temados}{$\heartsuit$}]
+    \item \textbf{\textcolor{temados}{Componentes}}: nodos, vértices. \qquad\ $N$
+    \item \textbf{\textcolor{temados}{Interacciones}}: enlaces, arcos \qquad\ $L$
+    \item \textbf{\textcolor{temados}{Sistema}}: red, grado \qquad\ $(N,L)$
+\end{enumerate}
+
+\subsection{\textcolor{temados}Tipos de redes}
+\begin{enumerate}[\color{temados}{$\bigstar$}]
+    \item \textbf{\textcolor{temados}{No dirigidas}}: enlaces simétricos. Ejemplos: enlaces de coautoría, redes de actores de Hollywood, interacciones entre proteínas, relaciones de amistad en \textit{\textcolor{temados}{Facebook}}.
+    \item \textbf{\textcolor{temados}{Dirigidas}}: enlaces dirigidos. Ejemplos: URLS en la WWW, llamadas de teléfono, relaciones metabólicas, relaciones de seguimiento en \textit{\textcolor{temados}{Twitter}}.
+    \item \textbf{\textcolor{temados}{Ponderadas}}: cada enlace tiene un peso distinto. Ejemplos: número de llamadas entre dos usuarios, número de tweets entre dos personas. Pueden tener signo negativo (ejemplo: redes de confianza) o ser únicamente enteros positivos (multigrafo).
+\end{enumerate}
+
+Un enlace no dirigido es la unión de dos enlaces dirigidos opuestos.
+
+\subsection{\textcolor{temados}Representaciones de una red}
+\begin{enumerate}[\color{temados}{$\bullet$}]
+    \item \textbf{\textcolor{temados}{Matriz de adyacencia}}: dada una matriz $A$ y dos nodos $i$ y $j$, $i \neq j$:
+    \begin{enumerate}[---]
+        \item $A_{ij} = 1$ si existe un enlace entre los nodos $i$ y $j$.
+        \item $A_{ij} = 0$ si los nodos $i$ y $j$ no están conectados.
+        \item $A_{ii} = 1$ si la red tiene \textit{\textcolor{temados}{auto-enlaces}}.
+    \end{enumerate}
+
+    En redes dirigidas la matriz $A$ no es simétrica, es decir, $A_{ij} \neq A_{ji}$.
+
+    Para calcular el grado de los nodos con esta repesentación:
+
+    \begin{enumerate}[---]
+        \item \textit{\textcolor{temados}{Grafo no dirigido}}:
+        \begin{displaymath}
+            k_i = \sum_{j=1}^N A_{ij} \qquad\ k_j = \sum_{i=1}^N A_{ij} \qquad\ L = \frac{1}{2}\sum_{j=1}^N k_i = \frac{1}{2}\sum_{i,j}^N A_{ij}
+        \end{displaymath}
+
+        \item \textit{\textcolor{temados}{Grafo dirigido}}:
+        \begin{displaymath}
+            k_i^{in} = \sum_{j=1}^N A_{ij} \qquad\ k_i^{out} = \sum_{i=1}^N A_{ij} \qquad\ L = \sum_{i=1}^N k_i^{in} = \sum_{j=1}^N k_j^{out} = \sum_{i,j}^N A_{ij}
+        \end{displaymath}
+    \end{enumerate}
+
+    Al ser las redes reales muy dispersas, el uso de esta representación supone un gasto innecesario de memoria.
+
+    \item \textbf{\textcolor{temados}{Lista de enlaces}}: Sólo almacenamos los elementos para los que $A_{ij} \neq 0$.
+
+    \item \textbf{\textcolor{temados}{Lista de adyacencias}}: Almacenamos, para cada nodo, los nodos a los que está conectado, es decir, para todos los nodos $i$, almacenamos todos los $j$ tales que $A_{ij} \neq 0$. Tiene la ventaja adicional de que se pueden recuperar los vecinos de cada nodo de forma muy rápida.
+\end{enumerate}
+
+
+\subsection{\textcolor{temados}Medidas en un grafo}
+\begin{enumerate}[\color{temados}{$\dashrightarrow$}]
+    \item \textbf{\textcolor{temados}{Grado de un nodo}}: número de enlaces que conectan un nodo con otro. Mide la importancia de un nodo individual en la red.
+
+    \begin{tabular}{c | c | c | c }
+        & No ponderado & Ponderado & Ponderado signo\\
+        \hline
+        Dirigido & $L = \sum_{i,j = 1}^N A_{ij}$ & $L = \sum_{i,j = 1}^N nonzero(A_{ij})$ & $L = \sum_{i,j = 1}^N |A_{ij}|$\\
+        \hline
+        No dirigido & $L = \frac{1}{2} \sum_{i,j = 1}^N A_{ij}$ & $L = \frac{1}{2} \sum_{i,j = 1}^N nonzero(A_{ij})$ & $L = \frac{1}{2} \sum_{i,j = 1}^N |A_{ij}|$ \\
+    \end{tabular}
+
+    En grafos dirigidos, definimos un \textit{\textcolor{temados}{grado de entrada}} (\textit{\textcolor{temados}{in-degree}}) y un \textit{\textcolor{temados}{grado de salida}} (\textit{\textcolor{temados}{out-degree}}). El grado total es la suma de ambos. 
+
+    Si $k^{in} = 0$ el nodo será \textit{\textcolor{temados}{fuente}} y si $k^{out}=0$, el nodo será \textit{\textcolor{temados}{sumidero}}.
+
+    \item \textbf{\textcolor{temados}{Grado medio}}: 
+    \begin{enumerate}[---]
+        \item \textit{\textcolor{temados}{Grafo no dirigido}}:
+
+        \begin{displaymath}
+            \langle k \rangle = \frac{1}{N} \sum_{i=1}^N k_i \qquad\ \langle k \rangle = \frac{2L}{N}
+        \end{displaymath}
+
+        \item \textit{\textcolor{temados}{Grafo dirigido}}: debemos presuponer que $\langle k^{in} \rangle = \langle k^{out} \rangle$
+
+        \begin{displaymath}
+            \langle k^{in} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{in}, \qquad\ \langle k^{out} \rangle = \frac{1}{N} \sum_{i=1}^N k_i^{out}, 
+        \end{displaymath}
+
+        \begin{displaymath}
+            \langle k \rangle = \frac{L}{N}
+        \end{displaymath}
+    \end{enumerate}
+
+    \item \textbf{\textcolor{temados}{Grafo completo}}: grafo con $L = L_{max}$, $A_{ii} = 0$, $A_{i \neq j} = 1$ y $\langle k \rangle = N-1$, donde
+
+    \begin{displaymath}
+        L_{max} = \binom{N}{2} = \frac{N(N-1)}{2}
+    \end{displaymath}
+
+    \item La mayoría de redes observadas en sistemas reales son \textbf{\textcolor{temados}{dispersas}}, es decir, $L \ll L_{max}$ o $\langle k \rangle \ll N-1$.
+\end{enumerate}
+
+\subsection{\textcolor{temados}Grafos bipartitos}
+Un \textit{\textcolor{temados}{Grafo bipartito}} o \textit{\textcolor{temados}{bigrafo}} es un grafo cuyos nodos pueden dividirse en dos conjuntos disjuntos $U$ y $V$ de tal modo que cada enlace conecta un nodo de $U$ con un nodo de $V$, es decir, son conjunto independientes. Se pueden generar \textit{\textcolor{temados}{dos proyecciones}} de cada red bipartita: la primera conecta los nodos de $U$ que están conectados al mismo nodo de $V$ y la segunda, lo mismo pero con los nodos de $V$. Ejemplos: red de actores de Hollywood, redes de colaboración, redes de enfermedades. También existen las \textit{\textcolor{temados}{redes multipartitas}}, por ejemplo, la red tripartia de recetas-ingredientes-compuestos.
+
+\subsection{\textcolor{temados}Caminos en grafos}
+\begin{enumerate}[\color{temados}{$\triangleright$}]
+    \item Un \textbf{\textcolor{temados}{camino}} es una secuencia de nodos en la que cada nodo es adyacente al siguiente. Se denota como $P_n$ y se representa como una colección ordenada de $n+1$ nodos y $n$ enlaces.
+
+    Un camino puede tener intersecciones consigo mismo y pasar a través del mismo enlace continuamente. Si un enlace se cruza varias veces, se cuentan todas ellas. En una red dirigida, el camino tiene que seguir la dirección de los enlaces dirigidos que la componen.
+
+    \item La \textbf{\textcolor{temados}{distancia}} (\textit{\textcolor{temados}{camino mínimo}}, \textit{\textcolor{temados}{camino geodésico}}, $d$) entre dos nodos se define como el número de elementos que contiene el camino más corto que los conecta. Si no hay ningún camino que conecte dos nodos, su camino mínimo es infinito. En \textit{\textcolor{temados}{grafos dirigidos}} cada camino necesita seguir la dirección concreta de los enlaces dirigidos y, por tanto, puede existir un camino desde el nodo $A$ hasta el nodo $B$ y no existir uno desde el nodo $B$ hasta el nodo $A$.
+
+    El camino mínimo de longitud $d=2$ entre dos nodos se calcula como:
+
+    \begin{displaymath}
+        N_{ij}^{(2)} = \sum_{k=1}^N A_{ik}A_{kj} = \Big[A^2 \Big]_{ij}
+    \end{displaymath}
+
+    y en el caso general, para un camino de longitud $d=d$ sería: 
+
+    \begin{displaymath}
+        N_{ij}^{(d)} = \Big[A^d\Big]_{ij}
+    \end{displaymath}
+
+    Este planteamiento es muy costoso para redes grandes, donde es mejor usar una \textit{\textcolor{temados}{búsqueda en anchura}}.
+
+    \item \textbf{\textcolor{temados}{Diámetro}} ($d_{max}$): es la \textit{\textcolor{temados}{longitud del camino mínimo más largo de la red}}, es decir, la distancia entre los dos nodos más lejanos. En redes grandes, se determina con un algoritmo de búsqueda en anchura.
+
+    \item \textbf{\textcolor{temados}{Distancia media/longitud media de los caminos}} ($\langle d \rangle$):
+    \begin{enumerate}[---]
+        \item En \textit{\textcolor{temados}{grafos dirigidos}}:
+
+        \begin{displaymath}
+            \langle d \rangle \equiv \frac{1}{2 L_{max}} \sum_{i, j \neq i} d_{ij}
+        \end{displaymath}
+
+        \item En \textit{\textcolor{temados}{grafos no dirigidos}} (donde $d_{ij} = d_{ji}$):
+
+        \begin{displaymath}
+            \langle d \rangle \equiv \frac{1}{L_{max}} \sum_{i, j > i} d_{ij}
+        \end{displaymath}
+    \end{enumerate}
+
+    \item \textbf{\textcolor{temados}{Camino/circuito Euleriano}}: camino que retorna al punto inicial después de recorrer \textit{\textcolor{temados}{cada enlace}} del grafo una sola vez. Un \textit{\textcolor{temados}{grafo Euleriano}} es aquel cuyos vértices tienen grado par. En \textit{\textcolor{temados}{grafos dirigidos}}, si $k_{i}^{in} = k_{i}^{out} \; \forall i \in N$, existirá un camino Euleriano.
+
+    \item \textbf{\textcolor{temados}{Camino/circuito Hamiltoniano}}: camino que visita cada nodo exactamente una vez.
+
+    \item \textbf{\textcolor{temados}{Ciclo}}: camino con el mismo nodo inicial y final.
+
+    \item \textbf{\textcolor{temados}{Camino auto-evitado}}: camino que no interseca consigo mismo.
+\end{enumerate}
+
+\subsection{\textcolor{temados}Conectividad y componentes}
+\begin{enumerate}[\color{temados}{$\spadesuit$}]
+    \item Dos nodos están conectados si existe al menos un camino entre ellos.
+    \item \textbf{\textcolor{temados}{Conectividad en grafos no dirigidos}}:
+    \begin{enumerate}[---]
+        \item \textit{\textcolor{temados}{Grafo conexo}} (\textit{\textcolor{temados}{no dirigido}}): todo par de vértices está unido por al menos un camino.
+        \item \textit{\textcolor{temados}{Componente conexa}}: subgrafo conexo del grafo principal al que no se pueden añadir más nodos. Un grafo no conexo está formado por dos o más componentes conexas.
+        \item \textit{\textcolor{temados}{Puente}}: cualquier enlace que, en caso de ser borrado, hace que el grafo no sea conexo.
+        \item Las componentes conexas se pueden obtener a partir de la matriz de adyacencia. Si la red no es conexa, su matriz de adyacencia puede escribirse en forma \textit{\textcolor{temados}{diagonal por bloques}}, es decir, ordenarse de forma que los bloques no nulos se agrupan en la diagonal. Cada bloque es una componente. 
+
+        Existen métodos algebraicos para saber si una matriz es diagonizable por bloques pero son muy costosos, por lo que en la práctica, las componentes conexas se determinan con ejecuciones sucesivas del algoritmo de búsqueda primero en anchura.
+    \end{enumerate}
+    \item \textbf{\textcolor{temados}{Conectividad en grafos dirigidos}}:
+    \begin{enumerate}[---]
+        \item \textit{\textcolor{temados}{Grafo fuertemente conexo}}: para cada par de nodos $i$ y $j$, existe un camino de $i$ a $j$ \textit{\textcolor{temados}{y viceversa}}, es decir, todo nodo del grafo es accesible desde cualquier otro siguiendo los enlaces dirigidos.
+
+        \item \textit{\textcolor{temados}{Grafo débilmente conexo}}: todo nodo del grafo es accesible desde cualquier otro si no se tiene en cuenta la dirección de los enlaces.
+
+        Los nodos que pueden alcanzar la Componente fuertemente conexa se denominan \textit{\textcolor{temados}{Componente de entrada}} y los que pueden ser alcanzados desde la componente fuertemente conexa se denominan \textit{\textcolor{temados}{Componente de salida}}.
+    \end{enumerate}
+    \item \textbf{\textcolor{temados}{Componente gigante}}: la mayor componente conexa de la red que incluye una fracción significativa de la misma.
+
+    \item \textbf{\textcolor{temados}{Componente aislada}}: componentes conexas que no forman parte de la componente gigante.
+\end{enumerate}
+
+\subsection{\textcolor{temados}Medidas principales de las redes}
+Además de la \textit{\textcolor{temados}{distancia media}} ($\langle d \rangle$), hay otras dos medidas importantes en teoría de redes:
+
+\begin{enumerate}[\color{temados}{$\Diamond$}]
+    \item \textbf{\textcolor{temados}{Distribución de grados}} (P(k)): probabilidad de que un nodo escogido aleatoriamente tenga grado $k$. Se construye a partir del histograma de grados de los nodos de la red:
+
+    \begin{displaymath}
+        P(k) = \frac{N_k}{N} \qquad\ \textrm{Donde $N_k$ es el número de nodos con grado $k$}
+    \end{displaymath}
+
+    Permite caracterizar distintos modelos de redes, sobre todo las \textit{\textcolor{temados}{redes libres de escala}} (\textit{\textcolor{temados}{scale-free}}), y determina muchos fenómenos de la red como su robustez y la difusión de virus. Además, el cálculo de muchas propiedades requiere conocer $p_k$, por ejemplo, el grado medio:
+    \begin{displaymath}
+        \langle k \rangle = \sum_{k=0}^{\infty} k \cdot p_k
+    \end{displaymath}
+
+    La suma de todos los $p_k$ debe ser igual a uno.
+
+    Se suele representar en forma de \textit{\textcolor{temados}{gráficos log-log}} usando ejes logarítmicos.
+
+    \item \textbf{\textcolor{temados}{Coeficiente de clustering}}: mide la \textit{\textcolor{temados}{densidad local de la red}}, es decir, qué proporción de vecinos de cada nodo están conectados entre sí. El coeficiente de clústering del nodo $i$ se anota como $C_i$ y abarca el intevalo $[0,1]$. $C_i = 0$ indica que ninguno de los vecinos del nodo $i$ están conectados entre sí y $C_i = 1$ indica que todos los vecinos del nodo $i$ están conectados entre sí.
+
+    \begin{displaymath}
+        C_i = \frac{2 L_i}{k_i (k_i-1)}
+    \end{displaymath}
+
+    \item La \textit{\textcolor{temados}{densidad global de la red}} se mide con el \textbf{\textcolor{temados}{coeficiente de clustering medio}}: mide la probabilidad de que dos vecinos de un nodo de la red escogido aleatoriamente estén conectados entre sí.
+
+    \begin{displaymath}
+        \langle C \rangle = \frac{1}{N} \sum_{i=1}^N C_i
+    \end{displaymath}
+\end{enumerate}
+
+\newpage
+\section{\textcolor{tematres}{Tema 3}}
+\subsection{\textcolor{tematres}Definición de red social}
+Una \textbf{\textcolor{tematres}{red social}} es un tipo concreto de red que modela \textit{\textcolor{tematres}{relaciones}} entre \textbf{\textcolor{tematres}{entes sociales}} tales como personas, grupos u organizaciones, en lugar de las propias entidades en sí. Ejemplos: redes de amistad, redes de comunicación entre empresas, redes de colaboración, etc.
+
+Sus tareas habituales son:
+
+\begin{enumerate}[\color{tematres}{$\bullet$}]
+    \item Identificar los actores más \textit{\textcolor{tematres}{influyentes}}, \textit{\textcolor{tematres}{prestigiosos}} o \textit{\textcolor{tematres}{centrales}}, mediante medidas estadísticas. Se centra tanto en \textit{\textcolor{tematres}{actores individuales}} como en grupos (\textit{\textcolor{tematres}{díadas}} o \textit{\textcolor{tematres}{triadas}}).
+    \item Identificar \textit{\textcolor{tematres}{hubs}} y \textit{\textcolor{tematres}{autoridades}} con algoritmos de análisis de enlaces.
+    \item Descubrir grupos cohesionados con técnicas de detección de \textit{\textcolor{tematres}{comunidades}}.
+\end{enumerate}
+
+Los actores y sus acciones se consideran \textit{\textcolor{tematres}{interdependientes}} y las relaciones entre ellos son canales para la transferencia o \textit{\textcolor{tematres}{flujo}} de recursos.
+
+\subsection{\textcolor{tematres}Tipos de redes sociales}
+\begin{enumerate}[\color{tematres}{$\leadsto$}]
+    \item El número de \textbf{\textcolor{tematres}{modalidades}} de una red se refiere al número de tipos distintos de entidades sociales existentes en ella:
+
+    \begin{enumerate}[---]
+        \item \textit{\textcolor{tematres}{Redes unimodales/de relación}}: consideran un único conjunto de actores, que pueden ser de muchos tipos distintos como personas, grupos organizaciones o colectivos\footnote{Comunidades (formadas por grupos de personas), naciones-estados(entidades más grandes que contienen muchas organizaciones y subgrupos)}. Los factores en los que se centra son los actores y sus atributos (edad, género, raza, estatus socio-económico...) y las relaciones entre ellos (valoraciones individuales como la amistad, transferencias de recursos materiales como préstamos o compra/venta y no materiales como comunicaciones, interacciones...)
+        \item \textit{\textcolor{tematres}{Redes bimodales/de afiliación}}: se centran en dos conjuntos de actores, o en un conjunto de actores y otro de eventos. Las relaciones miden conexiones entre actores de ambos conjuntos y los actores de un conjunto son distintos a los del otro.
+    \end{enumerate}
+
+    \item También puede distinguirse un único actor (\textit{\textcolor{tematres}{Redes egocéntricas}}) o un conjunto (\textit{\textcolor{tematres}{Redes completas}}):
+    
+    \begin{tabular}{c | p{3cm} | p{3cm}}
+     & Completas & Egocéntricas \\
+     \hline
+    Relación (unimodal) & Relaciones entre todos los miembros de un grupo determinado. & Relaciones de los miembros de la población con un individuo específico. \\
+    \hline
+    Afiliación (bimodal) & Relaciones entre los miembros de un grupo con los miembros de otro completamente distinto. & Relaciones de dos grupos distintos de entidades con un individuo específico. \\
+
+    \end{tabular}
+\end{enumerate}
+
+\subsection{\textcolor{tematres}Medidas para el análisis de redes sociales}
+Existen dos tipos de medidas:
+\begin{enumerate}[\color{tematres}{$\star$}]
+    \item \textbf{\textcolor{tematres}{Medidas locales (a nivel de actores)}}: están basadas en el concepto de \textit{\textcolor{tematres}{centralidad}} (redes no dirigidas) o \textit{\textcolor{tematres}{prestigio}} (redes dirigidas), una medida general de la posición de un actor en la estructura global de la red social que se usan para identificar a los \textit{\textcolor{tematres}{actores clave}}.
+    \begin{enumerate}[---]
+        \item \textit{\textcolor{tematres}{Grado}}: también conocido como \textit{\textcolor{tematres}{centralidad de grado de un actor}} ($C_D$) y se define en el intervalo $[0, g-1]$ siendo $g$ el número de nodos de la componente conexa. En \textit{\textcolor{tematres}{redes dirigidas}}, el \textit{\textcolor{tematres}{grado o prestigio de entrada}} se denomina \textbf{\textcolor{tematres}{soporte}} (los actores que reciben muchos enlaces son prominentes) y el \textit{\textcolor{tematres}{grado o prestigio de salida}}, \textbf{\textcolor{tematres}{influencia}} (los actores que tienen muchas conexiones directas con otros son influyentes).
+
+        Este valor suele normalizarse entre $g-1$.
+
+        El grado es una medida para evaluar la centralidad de un actor desde una \textbf{\textcolor{tematres}{perspectiva muy local}}, ya que sólo tiene en cuenta a sus vecinos cercanos y además, no captura las ``corredurías''.
+
+        \item \textit{\textcolor{tematres}{Intermediación}}: mide el número de nodos que necesitan pasar por el nodo $i$ para hacer sus conexiones mínimas con otros nodos y captura la correduría:
+
+        \begin{displaymath}
+            C_B (i) = \sum_{j,k \in V (G)/v} \frac{g_{jk} (i)}{g_{jk}}
+        \end{displaymath}
+
+        donde $g_{jk}$ es el número de caminos mínimos que conectan cualquier par de nodos $j$ y $k$ y $g_{jk} (i)$ es el número de esos caminos que incluyen al actor $i$. En redes dirigidas se define en $[0, (g-1)\cdot(g-2)]$ y en no dirigidas, en $[0, \frac{(g-1)\cdot(g-2)}{2}]$. Además, en redes no dirigidas se considera esta medida normalizada:
+
+        \begin{displaymath}
+            C_B(i) = \frac{2 C_B(i)}{(g-1)\cdot(g-2)}
+        \end{displaymath}
+
+        Los nodos con una alta intermediación tienen una posición que les permite \textbf{\textcolor{tematres}{trabajar como interfaces entre subgrupos de actores fuertemente unidos}}. Se suelen conocer también como \textbf{\textcolor{tematres}{porteros}} porque controlan el flujo de información entre comunidades. También puede calcularse la intermediación de los enlaces.
+
+        \item \textit{\textcolor{tematres}{Cercanía}}: mide la centralidad, pero desde la perspectiva de que es importante estar cerca del actor central y no en una posición de correduría. Enfatiza la distancia geodésica de cada actor con los demás. La suma de estas distancias geodésicas (distancias de los caminos mínimos) para cada actor es la lejanía de dicho actor al resto. \textit{\textcolor{tematres}{La inversa de dicha suma es la medida de cercanía}}:
+
+        \begin{displaymath}
+            C_c (i) = \frac{1}{\sum^g d(i,j)} \qquad\ C_c'(i) = \frac{C_c(i)}{g-1}
+        \end{displaymath}
+
+        En redes dirigidas, se aprovecha la dirección de los enlaces para definir do medidas de cercanía considerando sólo los enlaces de una única dirección en cada una de ellas:
+
+        \begin{itemize}
+            \item \textit{\textcolor{tematres}{Cercanía de entrada}}: por ejemplo, prestigio en redes de citación.
+            \item \textit{\textcolor{tematres}{Cercanía de salida}}: por ejemplo, alcance de la influencia de un autor.
+        \end{itemize}
+
+        \item \textit{\textcolor{tematres}{Excentricidad}} también conocida como \textit{\textcolor{tematres}{centralidad de excentricidad}} ($C_E$). Se define como la inversa de la máxima distancia geodésica entre un actor y cualquier otro de la red:
+
+        \begin{displaymath}
+            C_E (i) = \frac{1}{max_{j \in V (G)/i} d(i,j)} \qquad\ C_E'(i) = \frac{C_E(i)}{g-1}
+        \end{displaymath}
+
+        Los actores con un mayor valor de excentricidad se denominan \textbf{\textcolor{tematres}{actores periféricos}} y los de menor valor foman el \textit{\textcolor{tematres}{centro de la red}}.
+
+        \item \textit{\textcolor{tematres}{Centralidad de vector propio}}: se basa en que la centralidad de un nodo concreto depende de cómo de centrales sean sus vecinos (\textit{\textcolor{tematres}{prominencia}}). Define el \textit{\textcolor{tematres}{ego}} de un actor a través del \textit{\textcolor{tematres}{alters}} de sus vecinos de forma recursiva. A diferencia de la centralidad de grado, no todas las conexiones tienen la misma importancia.
+
+        \begin{displaymath}
+            C_{VP}(i) = a_{1i} \cdot C_{VP}(1) + a_{2i} \cdot C_{VP}(2) + \ldots + a_{ni} \cdot C_{VP}(n)
+        \end{displaymath}
+
+        Esta ecuación construye un sistema de $n$ ecuaciones con $n$ incógnitas que se representa de forma matricial ($A$ es la matriz de adyacencia).
+
+        \begin{displaymath}
+            C = A^T \cdot C \qquad\ \textrm{Donde $C = (C_{VP}(1),\ldots, C_{VP}(n))^T$}
+        \end{displaymath}
+
+        Esta ecuación coincide con la \textit{\textcolor{tematres}{ecuación característica para encontrar los vectores y valores propios de la matriz $A^T$}}.
+
+        Se suele considerar la medida normalizada:
+
+        \begin{displaymath}
+            c_i = \frac{1}{\lambda} \sum_{j=1}^n a_{ij} \cdot c_j \qquad\ C = \frac{1}{\lambda} A^T \cdot C \qquad\ \lambda C = A^T \cdot C
+        \end{displaymath}
+
+        donde $\lambda$ es una constante que equivale al mayor valor absoluto del vector propio dominante de $A$.
+
+        Otra medida de centralidad de vector propio es la \textit{\textcolor{tematres}{Centralidad de Bonacich}}:
+
+        \begin{displaymath}
+            c_i (\beta) = \sum_j (\alpha + \beta c_j) a_ji \qquad\ C(\beta) = \alpha (I - \beta A)^{-1} A1
+        \end{displaymath}
+
+        donde $\alpha$ es una constante de normalización, $A$ es la matriz de adyacencia, $I$ es la identidad, $1$ es una matriz con todas sus componentes a 1 y $\beta$ es un \textit{\textcolor{tematres}{factor de atenuación}} que determina qué actores influyen en la centralidad del nodo $i$:
+        \begin{itemize}
+            \item Si $\beta$ es pequeño $\longrightarrow$ \textit{\textcolor{tematres}{atenuación alta}}: sólo los amigos cercanos influyen y su importancia es muy puntual.
+            \item Si $\beta$ es grande $\longrightarrow$ \textit{\textcolor{tematres}{atenuación baja}}: la estructura global de la red tiene importancia.
+            \item Si $\beta = 0 \longrightarrow$ la fórmula coincide con la centralidad de grado.
+        \end{itemize}
+
+        El signo de $\beta$ determina el comportamiento de la medida: si $\beta > 0$ los actores tienen una mayor centralidad cuanto más conectados estén a actores centrales y si $\beta < 0$, al contrario.
+
+        \item \textit{\textcolor{tematres}{Coeficiente de clústering}}: cuantifica la propiedad de transitividad\footnote{\textbf{\textcolor{tematres}{Las redes sociales son transitivas por naturaleza}}, es decir, los amigos de un actor dado suelen ser amigos entre sí.}.
+    \end{enumerate}
+
+    \item \textbf{\textcolor{tematres}{Medidas globales (a nivel de red)}}: proporcionan información para evaluar la estructura global de la red e indican propiedades de fenómenos sociales subyacentes.
+
+    \begin{enumerate}[---]
+        \item \textit{\textcolor{tematres}{Diámetro}} ($d_{max}$): longitud del camino mínimo más largo de la red. Equivale al valor máximo de excentricidad para todos los nodos de la red:
+
+        \begin{displaymath}
+            E(i) = max_{j \in V (G)/i} d(i,j) \qquad\ d_{max} = max \{E(i): i \in V(G) \}
+        \end{displaymath}
+
+        Sirve para medir la \textit{\textcolor{tematres}{proximidad entre pares de actores en la red}}, indicando cómo de lejos están en el peor de los casos. Cuanto más dispersa sea la red, más diámetro tendrá.
+
+        \item \textit{\textcolor{tematres}{Radio}} ($r$): valor mínimo de excentricidad para toda la red:
+
+        \begin{displaymath}
+            r = min \{ E(i): i \in V (G) \}
+        \end{displaymath}
+
+        \item \textit{\textcolor{tematres}{Distancia media}} ($\langle d \rangle$): representa la eficiencia del flujo de información en la red.
+
+        \item \textit{\textcolor{tematres}{Grado Medio}}.
+
+        \item \textit{\textcolor{tematres}{Densidad}}: mide el grado de conectividad de la red social a nivel global.
+
+        \begin{displaymath}
+            D = \frac{L}{L_{max}}
+        \end{displaymath}
+
+        \item \textit{\textcolor{tematres}{Coeficiente de clústering global}}: Las redes sociales reales suelen tener valores de $\langle C \rangle$ muy altos. Eso implica que la \textit{\textcolor{tematres}{transitividad}} entre nodos aparece más y con más fuerza, incrementando la probabilidad de que se formen \textit{\textcolor{tematres}{cliques}}.
+
+        \item \textit{\textcolor{tematres}{Reciprocidad}} ($R$): en una \textit{\textcolor{tematres}{red dirigida}} mide la tendencia de pares de actores a tener conexiones mutuas entre ellos.
+
+        \begin{displaymath}
+            R = \frac{\# mut}{\# mut + \# asim}, \qquad\ R \in [0,1]
+        \end{displaymath}
+
+        Donde $\#mut$ es el número de conexiones mutuas y $\#asim$ el número de conexiones asimétricas.
+        
+        \item Y otras medidas denominadas \textit{\textcolor{tematres}{medidas de Centralización}} que son \textit{\textcolor{tematres}{agregaciones a nivel de grupo de actores}} de medidas locales de centralidad que permiten comparar redes. Una forma de construir medidas de este tipo es la formulación de Freeman:
+
+        \begin{displaymath}
+            C_A = \frac{\sum_{i=1}^g \bigg[C_A (n^*) - C_A (i) \bigg]}{max \sum_{i=1}^g \bigg[C_A (n^*) - C_A (i) \bigg]} \qquad\ C_A \in [0,1]
+        \end{displaymath}
+
+        donde $C_A$ es una medida de centralidad y $C_A(i)$ su valor para el actor $i$, $C_A(n^*)$ es el valor máximo de esa medida para los $g$ actores de la red y $max \sum_{i=1}^g [C_A (n^*) - C_A (i) ]$ es el máximo teórico del numerador. Si $C_A = 0$ todos los actores tienen el mismo valor de centralidad y $C_A = 1$ cuando un actor domina totalmente al resto.
+
+        Por ejemplo, la \textit{\textcolor{tematres}{media de Centralización de grado}} ($C_D$) donde el máximo teórico es $(g-1) \cdot (g-2)$ sería:
+
+        \begin{displaymath}
+            C_D = \frac{\sum_{i=1}^g \bigg[C_D (n^*) - C_D (i) \bigg]}{(g-1) \cdot (g-2)} 
+        \end{displaymath}
+
+        Si $C_D = 1$, tendremos un grafo de estrella y si $C_D = 0$ tendremos un grafo donde todos los nodos tienen el mismo grado.
+
+        El problema de estas medidas es el máximo teórico, que no es calculable para algunas \textit{\textcolor{tematres}{centralidades de prestigio}} en redes dirigidas. Alternativamente se usa la \textit{\textcolor{tematres}{varianza de los valores de centralidad}}.
+    \end{enumerate}
+
+\end{enumerate}
+
+\newpage
+\section{\textcolor{temacuatro}{Tema 4}}
+\subsection{\textcolor{temacuatro}Modelado estructural}
+Su objetivo es \textit{\textcolor{temacuatro}{detectar, extraer y simplificar las relaciones}} subyacentes en nuestro dominio de aplicación. Para ello, procesa las matrices que representan la red (cuyas entradas indican \textit{\textcolor{temacuatro}{similitud}} o \textit{\textcolor{temacuatro}{distancia}}). Hay dos tipos principales de técnicas.
+
+\subsubsection{\textcolor{temacuatro}Reducción de la dimensionalidad}
+Las técnicas de \textit{\textcolor{temacuatro}{reducción de la dimensión}} reducen la dimensión de la red normalmente a 2D o 3D. Esto implica una pérdida de información como consecuencia de la agregación de múltiples dimensiones. Estas ténicas no muestran relaciones entre enlaces, sólo relaciones de proximidad espacial.
+
+\begin{description}
+    \item[De naturaleza estadística]:
+
+    \begin{enumerate}[\color{temacuatro}{$\heartsuit$}]
+        \item \textbf{\textcolor{temacuatro}{Clústering}}: agrupa los datos con características similares. Crea un \textit{\textcolor{temacuatro}{dendrograma}} de clusters de objetos relacionados. Cualquier técnica de clústering utiliza al menos la \textit{\textcolor{temacuatro}{métrica de distancia}} y las \textit{\textcolor{temacuatro}{reglas de aglomeración}} (método del vecino más cercano, método del vecino más lejano, agrupamiento promedio y método de Ward).
+        \item \textbf{\textcolor{temacuatro}{Análisis de componentes principales}}: el \textit{\textcolor{temacuatro}{análisis factorial}} es un método de análisis multivariante que trata de explicar un conjunto extenso de variables observables mediante un número reducido de varibales hipotéticas llamadas \textit{\textcolor{temacuatro}{factores comunes}} sin perder información ni capacidad explicativa. El \textit{\textcolor{temacuatro}{análisis de componentes principales}} se basa en que no hay factores comunes específicos sino que cada factor debe explicar el máximo de la variabilidad inicial de los datos. Las variables son susceptibles de ser reducidas a factores comunes.
+        \item \textbf{\textcolor{temacuatro}{Escalado multidimensional}}: establece relaciones entre datos de alta dimensión y espacios 2D/3D de forma que se mantienen las distancias originales entre los datos. Los \textit{\textcolor{temacuatro}{métodos métricos de MDS}} se basan en el análisis de valores propios de la matriz que muestran la relación entre cada elemento. Al no ser iterativos son bastantes costosos. Los \textit{\textcolor{temacuatro}{métodos no métricos de MDS}} consideran una medida llamada \textit{\textcolor{temacuatro}{stress}} para posicionar los nodos en el espacio de menor dimensión, el proceso iterativo se detiene cuando el valor global de esta medida queda por debajo de un umbral.
+    \end{enumerate}
+
+    \item[De naturaleza conexionista]:
+    \begin{enumerate}[\color{temacuatro}{$\heartsuit$}]
+        \item \textbf{\textcolor{temacuatro}{Mapas auto-organizativos}}: basados en el comportamiento de una red neuronal SOM. Su funcionamiento se basa en establecer una correspondencia automática entre la información n-dimensional y un espacio 2D de salida. Los datos de entrada con características comunes activan zonas próximas del mapa. Este método nos sirve para establecer relaciones, desconocidas previamente, entre un conjunto determinado de datos. El aprendizaje es no supervisado y off-line, presenta una etapa de entrenamiento y otra de operación. El SOM no es una técnica de reducción de la dimensión como las anteriores aunque realiza una ordenación en el espacio 2D que puede considerarse como tal.
+    \end{enumerate}
+\end{description}
+
+\subsubsection{\textcolor{temacuatro}Poda de redes}
+Se basan en la \textit{\textcolor{temacuatro}{eliminación de nodos y/o enlaces}}.
+
+\begin{description}
+    \item[Poda por umbral]: eliminando aquellos nodos/enlaces cuyo valor/peso sea inferior o superior a un límite. Puede provocar pérdida de la conectividad en la red.
+
+    \item[Árbol generador minimal]: cada par de nodos queda únicamente conectado por un único enlace. Si dos enlaces tienen el mismo peso se eliminará uno u otro de forma aleatoria. Obtienen un subconjunto mínimo de enlaces.
+
+    \item[Redes Pathfinder]: visualizan todos los nodos con los enlaces más significativos. Se basa en el uso de la \textit{\textcolor{temacuatro}{desigualdad triangular}} y \textit{\textcolor{temacuatro}{caminos mínimos}}. Construyen una \textit{\textcolor{temacuatro}{red ponderada}}. Si un enlace no verifica la desigualdad triangular, no pertencerá al camino geodésico y se considerará \textit{\textcolor{temacuatro}{redundante}}. Tiene dos parámetros principales:
+
+    \begin{enumerate}[---]
+        \item $r \in [1,\infty]$: el peso de un camino geodésico de la red $P$ compuesto por $k$ enlaces se calcula con la \textit{\textcolor{temacuatro}{Métrica de Minkowski}} que depende de $r$:
+
+        \begin{displaymath}
+            w(P) = \left[\sum_{i=1}^k w_i^r \right]^{\frac{1}{r}}
+        \end{displaymath}
+
+        Si $r = 1$ la distancia será la suma de los pesos de los arcos, si $r = 2$ la distancia será la distancia Euclídea y si $r = \infty$ la distancia será el peso del enlace de mayor peso:
+
+        \begin{displaymath}
+            \lim_{r \rightarrow \infty}[w_i^r + w_j^r]^{\frac{1}{r}} = max(w_i, w_j)
+        \end{displaymath}
+
+        \item $q \in \{2, \ldots, n-1\}$: indica el número máximo de enlaces de un camino para el que se exige la satisfacción de la desigualdad triangular. Cuanto mayor sea $q$ mayor será la poda. $q=1$ correspondería a la red original.
+    \end{enumerate}
+
+    \item[Agregación de nodos]: se integran varios nodos en uno solo y se muestran únicamente los enlaces entre los clústers de nodos así creados.
+\end{description}
+
+\subsection{\textcolor{temacuatro}Representación gráfica}
+Su objetivo es \textit{\textcolor{temacuatro}{transformar un modelo previo de estructura en modelo gráfico}} para poder examinar visualmente la estructura e interactuar con ella. una misma red puede representarse gráficamente de diversas formas usando distintos algoritmos de distribución, con distintas filosofías.
+
+\subsubsection{\textcolor{temacuatro}Distribuciones básicas}
+\begin{description}
+    \item[Aleatoria]: Se escogen aleatoriamente las coordenadas para cada nodo. Es muy rápida pero imposible de interpretar.
+    \item[Circular]: Se distribuyen los nodos en círculo y se dibujan los enlaces entre ellos. Es muy rápida pero difícil de interpretar en redes grandes y densas, por el solapamiento entre enlaces. Además es difícil identificar clústers.
+    \item[Radial]: Se distribuyen los nodos en círculo, se coloca el \textit{\textcolor{temacuatro}{nodo central}} en el centro de la visualización y se distribuyen sus vecinos en círculos concéntricos de radio equivalente al peso de su enlace. Es muy rápida pero no tiene en cuenta que los nodos que estén conectados entre sí deberían estar cercanos en la misma capa.
+\end{description}
+
+\subsubsection{\textcolor{temacuatro}Criterios estéticos}
+\begin{enumerate}[\color{temacuatro}{$\clubsuit$}]
+    \item Distribución uniforme de los nodos
+    \item Simetría
+    \item Minimizar cruces entre enlaces
+    \item No permitir que los nodos se superpongan en enlaces que no incidan en ellos.
+    \item En redes no ponderadas, mantener una longitud de enlace uniforme.
+    \item En redes ponderadas, la longitud del enlace debe ser proporcional a su peso.
+\end{enumerate}
+
+\subsubsection{\textcolor{temacuatro}Métodos de distribución guiados por fuerzas}
+Fueron propuestos para verificar criterios estéticos, cada método hace énfasis especial en alguno de ellos.
+
+\begin{description}
+    \item[Sistema de muelles]: los nodos ejercen una \textit{\textcolor{temacuatro}{fuerza repulsiva}} entre sí y los enlaces ejercen una \textit{\textcolor{temacuatro}{fuerza atractiva}} entre los nodos conectados. Así, los nodos no conectados tienden a alejarse y los conectados a acercarse. La distribución inicial es aleatoria y se van moviendo nodos de acuerdo a la acción de las fuerzas. La distribución óptima es aquella en el que la suma de las fuerzas de todos los nodos vale 0. Dos métodos muy conocidos en esta familia son el de \textit{\textcolor{temacuatro}{Eades}} y el de \textcolor{temacuatro}{\textit{Fruchterman \& Reingold}}. Este último tiene un \textit{\textcolor{temacuatro}{parámetro de temperatura}} $t$ que reduce el máximo desplazamiento posible para los nodos según avanza la ejecución y, además, considera una longitud de enlace uniforme. Trata de reducir el número de cruces entre enlaces.
+    \item[Distancias teóricas del grafo]: para conseguir que la localización de los nodos respete las distancias teóricas del grafo, los enlaces ejercen una \textit{\textcolor{temacuatro}{fuerza atractiva}} si el enlace es más largo que su longitud natural en el grado y ejercen una \textit{\textcolor{temacuatro}{fuerza repulsiva}} si el enlace es más corto que su longitud natural en el grafo. Un método muy conocido es \textit{\textcolor{temacuatro}{Kamada \& Kawai}}. Este último sólo mueve el \textit{\textcolor{temacuatro}{nodo peor situado}} en cada iteración.
+    \item[Davidson y Harel]: incluye restricciones adicionales al enfoque tradicional basado en fuerzas con el objetivo de minimizar el número de cruces entre enlaces y prevenir que los nodos se acerquen a los enlaces no adyacentes. Está basado en la metaheurística \textit{\textcolor{temacuatro}{simulated annealing}}, permite movimientos grandes y de empeoramiento al principio de la ejecución. Tiene parámetros que permiten que sea muy personalizable.
+    \item[Métodos basados en fuerzas avanzados]: algoritmos \textit{\textcolor{temacuatro}{multi-escala}} capaces de producir buenas prestaciones con redes de más de 1000 nodos. Por ejemplo el \textit{\textcolor{temacuatro}{Harel y Koren}} y el \textit{\textcolor{temacuatro}{Yifan Hu}}.
+\end{description}
+
+\newpage
+\section{\textcolor{temacinco}{Tema 5}}
+\subsection{\textcolor{temacinco}Redes aleatorias}
+Un \textit{\textcolor{temacinco}{grafo aleatorio}} G(N,p) es un grafo no dirigido con $N$ nodos donde cada par de nodos está conectado aleatoriamente con una probabilidad prefijada $p$. Esta probabilidad tiene una \textit{\textcolor{temacinco}{distribución binomial}}. Si mantenemos fijo el valor de la probabilidad de conexión entre nodos, $p$, y aumentamos el número de nodos, $N$, el grado medio de la red, $\langle k \rangle$ aumentará. Conforme aumenta el tamaño de la red, $N$, la distribución binomial se va volviendo más estrecha y por tanto, mayor será la probabilidad de que el $k$ de un nodo sea cercano a $\langle k \rangle$. El número de posibilidades para escoger $k$ elementos de entre $N-1$ es:
+
+\begin{displaymath}
+    \frac{(N-1)!}{k! \cdot (N - 1 - k)!}
+\end{displaymath}
+
+La distribución de grados depende sólo de $\langle k \rangle$ y no de $N$. Por tanto, redes con distintos tamaños pero igual $\langle k \rangle$ tendrán la misma distribución de grados. En este tipo de redes, encontrar nodos muy alejados de $\langle k \rangle$ es prácticamente imposible, mientras que en una red real es algo bastate común (gente muy popular y gente muy solitaria).
+
+\subsubsection{\textcolor{temacinco}Evolución de una red aleatoria}
+\begin{description}
+    \item[Régimen subcrítico]: Se da cuando $\langle k \rangle < 1$, no existe una verdadera componente gigante sino que hay $N-L$ clústers aislados. El mayor clúster es un árbol de tamaño $\ln N$.
+    \item[Régimen crítico]: Se da cuando $\langle k \rangle = 1$, en este punto aparece una única componente gigante aunque aún contiene una fracción pequeña de nodos. Las componentes pequeñas con árboles mientras que la componente gigante tiene ciclos.
+    \item[Régimen supercrítico]: Se da cuando $\langle k \rangle > 1$, hay una única componente gigante con más nodos según nos alejamos del punto crítico. Este estado se mantiene hasta que todos los nodos son absorbidos por la componente gigante.
+    \item[Régimen conectado]: Se da cuando $\langle k \rangle  > \ln N$. Para valores grandes de $p$ la componente gigante absorbe todos los nodos y componentes. Sólo hay un clúster con muchos ciclos. Cuando se entra en este estado la red es aún relativament dispersa.
+\end{description}
+
+\subsubsection{\textcolor{temacinco}Distancias en redes aleatorias}
+Los grafos aleatorios tienden a tener una topología en forma de árbol con nodos de grado casi constante: $N_{1} \approx \langle k \rangle$, $N_2 \approx \langle k \rangle^2$, $N_d \approx \langle k \rangle^d$ \footnote{Número de vecinos a distancia $d$}. Se podría estimar teoricamente $d_{max}$ con la siguiente fórmula, sin embargo, estima muchísimo mejor $\langle d \rangle$:
+
+\begin{displaymath}
+    \langle d \rangle = \frac{\log N}{\log \langle k \rangle}
+\end{displaymath}
+
+Esto se debe a que, en la práctica, $d_{max}$ está dominada por unos pocos caminos de longitud extrema mientras que $\langle d \rangle$ está promediada entre todos los pares de nodos. En general, $\log N \ll N$, por tanto, el hecho de que $\langle d \rangle$ dependa del $\log N$ implica que \textit{\textcolor{temacinco}{las distancias en una red aleatoria son varios órdenes de magnitud menores que el tamaño de la red}}. El término $\frac{1}{\langle k \rangle}$ implica que cuanto más densa sea la red menor será la distancia entre sus nodos.
+
+\subsubsection{\textcolor{temacinco}Coeficiente de clústering}
+Para calcular $C_i$ debemos estimar el número esperado de enlaces $L_i$ entre los vecinos $k_i$ de un nodo. Como los enlaces son independientes y tienen la misma probabilidad $p$ en una red aleatoria:
+
+\begin{displaymath}
+    C_i = \frac{\langle k \rangle}{N}
+\end{displaymath}
+
+Por tanto, el coeficiente de clústering en una red aleatoria es pequeño e independiente del grado del nodo. Dado un $\langle k \rangle$ fijo, $C_i$ decrece con el tamaño de la red $N$.
+
+\subsection{\textcolor{temacinco}Redes de Mundos Pequeños}
+El secreto que subyace al efecto de mundos pequeños se encuentra en el volumen de la red, las redes de mundos pequeños tienen un \textit{\textcolor{temacinco}{crecimiento exponencial}}:
+
+\begin{displaymath}
+    \langle d \rangle = \frac{\ln N}{\ln \langle k \rangle}
+\end{displaymath}
+
+El clústering inhibe la propiedad de mundos pequeños, ya que reduce el volumen exponencial (alguno de los vecinos de tus vecinos son también tus vecinos). El crecimiento exponencial continúa mientras que $N(d) < N$ ($d \leq \langle d \rangle$). En resumen, $\langle d \rangle_{red} \approx \ln N$ y $\langle C \rangle_{red} \gg \langle C \rangle_{aleatoria}$.
+
+\subsubsection{\textcolor{temacinco}Modelo de Watts y Strogatz}
+Para generar una red de mundos pequeños a través del modelo de Watts y Strogatz tenemos que
+
+\begin{enumerate}[1.]
+    \item Construir una red de retículo en anillo con $N$ nodos, cada uno con $\langle k \rangle$ vecinos y $L = \frac{N \langle k \rangle}{2}$ enlaces ($N \gg \langle k \rangle \gg \ln N$)
+    \item Reasignar cada enlace con probabilidad $p$. Necesitaríamos $\frac{\langle k \rangle}{2}$ iteraciones para cubrir todos los enlaces. No se permiten autoenlaces ni enlaces repetidos.
+\end{enumerate}
+
+Con un $p$ pequeño se mantiene la estructura de retículo regular y con un $p$ grande se transforma en una red aleatoria (\hyperref[p]{Tabla \ref*{p}}). En la zona ``intermedia'' hay una reducción rápida de la distancia media, $\langle d \rangle$, por la aparición de enlaces ``atajo'' y una reducción suave del coeficiente de clústering, $\langle C \rangle$. Para eliminar el clústering hace falta una alta aleatoriedad pero para eliminar la localidad basta con una poca.
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{c | c | c}
+& $p = 0$ & $p = 1$\\
+\hline
+$\langle d \rangle$ & $\frac{N}{2 \langle k \rangle}$ & $\frac{\ln N}{\ln \langle k \rangle}$ \\
+$\langle C \rangle$ & $\frac{3}{4}$ & $\frac{\langle k \rangle}{N}$ \\
+\end{tabular}
+\caption{Comparando el valor de $p$}
+\label{p}
+\end{table}
+
+Alternativamente al modelo inicial, podemos añadir enlaces al retículo inicial con una probabilidad $p$.
+
+Este modelo proporciona conocimiento sobre la interrelación del clústering y la topología de mundos pequeños, captura la esencia de muchas redes reales y tiene en cuenta el alto coeficiente de clústering observado en algunas. Sin embargo, no representa una distribución de grados realista y los enlaces largos son menos frecuentes que los cortos.
+
+\subsection{\textcolor{temacinco}Redes libres de escala}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{c | c | c | c}
+& $\langle d \rangle$ & $C$ & $p_k$ \\
+\hline
+Redes regulares & $N^{\frac{1}{D}}$ &  $const$ & $\delta (k - k_d)$ \\
+Redes aleatorias & $\frac{\log N}{\log \langle k \rangle}$ & $\frac{\langle k \rangle}{N}$ & Poisson \\
+Mundos pequeños & $\frac{\log N}{\log \langle k \rangle}$ & $const$ & Exponencial \\ 
+\end{tabular}
+\caption{Comparativa de distintos tipos de redes}
+\label{cmpred}
+\end{table}
+
+La distribución de grados en las redes libres de escala siguen la \textit{\textcolor{temacinco}{ley de la potencia}}.
+
+\subsubsection{\textcolor{temacinco}Hubs}
+
+\begin{enumerate}[\color{temacinco}{$\bullet$}]
+    \item Para valores pequeños de $k$, la red libre de escala tiene un alto número de nodos con grado pequeño.
+    \item Para valores de $k$ cercanos a $\langle k \rangle$, en una red aleatoria hay muchos nodos con un grado $k \approx \langle k \rangle$.
+    \item Para valores altos de $k$, la posibilidad de encontrar un nodo con grado alto es varios ordenes de magnitud mayor en una red libre de escala.
+\end{enumerate}
+
+Para cualquier distribución de grados $p_k$ es posible calcular el grado máximo esperado, $k_{max}$. En el caso de una \textit{\textcolor{temacinco}{red aleatoria con distribución exponencial}} sería:
+
+\begin{displaymath}
+    k_{max} = k_{min} + \frac{\ln N}{\lambda}
+\end{displaymath}
+
+Depende de $\ln N$, \textit{\textcolor{temacinco}{crece suavemente}} y hay poca diferencia entre $k_{max}$ y $k_{min}$. \textit{\textcolor{temacinco}{No hay hubs}}. En el caso de una \textit{\textcolor{temacinco}{red aleatoria con distribución de Poisson}} crece \textit{\textcolor{temacinco}{aún más suavemente}}. Y por último, en el caso de una \textit{\textcolor{temacinco}{red libre de escala}}:
+
+\begin{displaymath}
+    k_{max} \approx k_{min} N^{\frac{1}{\gamma - 1}}
+\end{displaymath}
+
+Depende de $N$. Cuanto mayor es el tamaño de la red mayor es el grado del mayor hub. \textit{\textcolor{temacinco}{Hay grandes diferencias}} entre $k_{max}$ y $k_{min}$.
+
+\subsubsection{\textcolor{temacinco}Origen del término ``Libre de Escala''}
+El término ``libre de escala'' está relacionado con \textit{\textcolor{temacinco}{momentos de la distribución de la probabilidad de grados}}:
+
+\begin{enumerate}[\color{temacinco}{$\heartsuit$}]
+    \item $n = 1$: el primer momento, $\langle k \rangle$, es el \textit{\textcolor{temacinco}{grado medio}}.
+    \item $n = 2$: el segundo momento, $\langle k^2 \rangle$, es la \textit{\textcolor{temacinco}{varianza}} $\sigma^2 = \langle k^2 \rangle - \langle k \rangle^2$, que mide la dispersión de los grados.
+    \item $n = 3$: el tercer momento, $\langle k^3 \rangle$ determina la \textit{\textcolor{temacinco}{asimetría}} indicando cómo de simétrica es $p_k$ alrededor de la media.
+\end{enumerate}
+
+Como $k_{max}$ crece con el tamaño de la red, debemos analizar el comportamiento del $n$-ésimo momento cuando $k_{max} \rightarrow \infty$:
+
+\begin{enumerate}[\color{temacinco}{$\dagger$}]
+    \item Si $n - \gamma + 1 \leq 0$, el $n$-ésimo momento está acotado. Todos los momento en los que $n \leq \gamma - 1$ son finitos.
+    \item Si $n - \gamma + 1 \geq 0$, el $n$-ésimo momento tiende a infito según la red crece. Todos los momentos en los que $n \geq \gamma - 1$ divergen.
+\end{enumerate}
+
+La mayoría de exponentes de grado, $\gamma$, están entre 2 y 3: $\langle k \rangle$ es finito pero $\langle k^2 \rangle$ y el resto de momentos tienden a infito, por tanto:
+
+\begin{displaymath}
+    \sigma_k = \sqrt{\langle k^2 \rangle - \langle k \rangle^2} \rightarrow \infty \qquad\ k = \langle k \rangle \pm \sigma_k
+\end{displaymath}
+
+Es decir, los valores medios no tienen sentido al ser las fluctuaciones demasiado grandes. La escala interna no es coherente.
+
+\subsubsection{\textcolor{temacinco}Propiedad de mundos ultra pequeños}
+Las distancias en una red libre de escala son o bien menores o bien iguales a las existentes en una red aleatoria equivalente.
+
+\begin{enumerate}[\color{temacinco}{$\bigstar$}]
+    \item $\gamma = 2, \langle d \rangle = const$. La mayoría de nodos están conectados al mayor hub haciendo que la distancia media sea independiente del tamaño del sistema.
+    \item $2 < \gamma < 3, \langle d \rangle = \frac{\ln \ln N}{\ln (\gamma -1)}$ (\textit{\textcolor{temacinco}{mundo ultra-pequeño}}). En una red aleatoria todos los nodos tienen un grado similar por lo que muchos caminos tienen una longitud similar. En una red libre de escala, la mayoría de caminos pasan a través de los hubs reduciendo las distancias entre nodos.
+    \item $\gamma = 3, \langle d \rangle = \frac{\ln N}{\ln \ln N}$. Es un \textit{\textcolor{temacinco}{punto crítico}}. El segundo momento de la distribución de grados ya no diverge y las distancias vuelven a tener la dependencia logarítmica de los mundos pequeños de las redes aleatorias, aunque suavizado.
+    \item $\gamma > 3, \langle d \rangle = \ln N$ (\textit{\textcolor{temacinco}{mundo pequeño}}). El segundo momento es finito y la red vuelve a comportarse como una red aleatoria. Sigue habiendo hubs pero no con el suficiente grado como para tener un impacto significativo en las distancias.
+\end{enumerate}
+
+Pueden existir redes aleatorias con $\gamma = 4,5,6,\ldots$ pero es difícil distinguirlas de las redes aleatorias. Se necesitarían $2/3$ órdenes de magnitud de escalado, es decir $k_{max} > 10^2 k_{min}$. Esto restringe el tamaño del sistema requerido para poder documentar estas redes. Para medir un $\gamma = 5$ necesitaríamos una red con $N \approx 10^{12}$.
+
+\newpage
+\section{\textcolor{temaseis}{Tema 6}}
+Las redes complejas tienden a mostrar una \textit{\textcolor{temaseis}{estructura de comunidades}}. Estas comunidades se deben a una \textit{\textcolor{temaseis}{alta concentración de enlaces en ciertas regiones del grafo}} y una \textit{\textcolor{temaseis}{baja concentración de enlaces entre esas regiones}}, estos enlaces entre regiones se denominan \textit{\textcolor{temaseis}{puentes}}.
+
+El clústering implica modularidad. La propiedad de mundos pequeños y los hubs tienden a eliminar la modularidad. Por tanto, el clústering sólo debe darse en la periferia de la red. Los nodos con un grado bajo suelen pertenecer a un único módulo y los hubs suelen hacer de puente entre varios. Para descubir los módulos usamos las \textit{\textcolor{temaseis}{medidas de modularidad}} ($Q \in [-1,1]$): miden la calidad de una partición concreta y se definen como la diferencia entre el número de enlaces existentes en los grupos y el número de enlaces esperado en una red aleatoria equivalente. En una red aleatoria, $Q = 0$. En la práctica $Q = 0.3$ es un buen valor. Se usa tanto para comparar la calidad de las particiones como para diseñar métodos de descubrimiento de comunidades maximizando su valor.
+
+En el mundo real, los nodos con propiedades comunes tienden a formar comunidades. En \textit{\textcolor{temaseis}{formación de opiniones}}, cada nodo adopta la opinión mayoritaria de sus vecinos. Para mantener opiniones divergentes es mejor tener una configuración \textit{\textcolor{temaseis}{Erdos-Renyi}} que una por comunidades.
+
+\subsection{\textcolor{temaseis}Métodos de detección de comunidades}
+\subsubsection{\textcolor{temaseis}Comunidades centradas en nodos}
+Cada nodo del grupo satisface ciertas propiedades (\textit{\textcolor{temaseis}{criterio estructural}}):
+
+\begin{description}
+    \item[Mutualidad completa]: (\textit{\textcolor{temaseis}{cliques}}). El grupo es un subgrafo completo. Para identificarlos se aplica un algoritmo de poda recursiva en el que se van buscando cliques con un enfoque greedy y podando los nodos de la red con un grado menor que $k$. Este es un problema NP-Completo y además no es robusto: no todos los miembros de un grupo deben estar conectados entre sí. Es más importante buscar solapamiento entre cliques.
+    \item[Frecuencia de enlaces entre miembros]: (\textit{\textcolor{temaseis}{k-cores}}). Todos los miembros del grupo tienen enlaces al menos a otros $k$ miembros. Aún así, es una estructuras demasiado restrictiva como requisito para detectar comunidades naturales.
+\end{description}
+
+\subsubsection{\textcolor{temaseis}Comunidades centradas en grupos de nodos}
+Se consideran las conexiones del grupo globalmente. El grupo completo tiene que satisfacer ciertas propiedades (\textit{\textcolor{temaseis}{criterio estructural}}):
+
+\begin{description}
+    \item[Cercanía entre miembros]: (\textit{\textcolor{temaseis}{$n$-cliques}}) . Los individuos del grupo están separados por un máximo de $n$ saltos (Si $n=1$ tendríamos un clique). Como problemas tiene que el diámetro de la red puede ser mayor que $n$ y además, el $n$-clique puede estar desconectado (los caminos pueden pasar por nodos que no estén en el grupo). Como solución se proponen los \textit{\textcolor{temaseis}{$n$-clubs}}: subgrafos máximos de diámetro $n$.
+    \item[Cohesión interna del grupo]: (\textit{\textcolor{temaseis}{$p$-cliques}} y \textit{\textcolor{temaseis}{quasi-cliques}} \textit{\textcolor{temaseis}{$\gamma$-densos}}). Frecuencia relativa de enalces entre los miembros del grupo en comparación con la de los no miembros. Se basa en los conceptos de \textit{\textcolor{temaseis}{grado interno}}, $k_i^{int}$ (número de enlaces con miembros del mismo grupo) y \textit{\textcolor{temaseis}{grado externo}}, $k_i^{ext}$ (número de enlaces al resto de la red). Si $k_i^{ext} = 0$ todos los vecinos de $i$ pertenecen a la misma comunidad, $G_s$ y si $k_i^{int} = 0$ todos los vecinos de $i$ pertenecen a otras comunidades e $i$ debe asignarse a una comunidad distinta.
+
+    \begin{enumerate}[\color{temaseis}{$\heartsuit$}]
+        \item \textbf{\textcolor{temaseis}{Comunidad fuerte}} (nodos): cada nodo de la comunidad tiene más enlaces dentro de la comunidad que con el resto del grafo.
+
+        \begin{displaymath}
+            k_i^{int} (G_s) > k_i^{ext} (G_s)
+        \end{displaymath}
+
+        \item \textbf{\textcolor{temaseis}{Comunidad débil}} (grupo): el grado interno total de $G_s$ es mayor que su grado externo total.
+
+        \begin{displaymath}
+            \sum_{i \in G_s} k_i^{int} (G_s) > \sum_{i \in G_s} k_i^{ext} (G_s)
+        \end{displaymath}
+    \end{enumerate}
+
+    En la identificación de \textit{\textcolor{temaseis}{$p$-cliques}}, se hace un particionamiento de la red de forma que los nodos tengan como mínimo una proporción $p \in [0,1]$ de vecinos dentro del grupo. En la identificación de \textit{\textcolor{temaseis}{quasi-cliques $\gamma$-densos}} el criterio exigido es que la densidad del grupo sea mayor o igual a un umbral, y no se considera el ratio de enlaces dentro y fuera del grupo.
+\end{description}
+
+\subsubsection{\textcolor{temaseis}Comunidades centradas en jerarquía}
+Se construye una \textit{\textcolor{temaseis}{estructura jerárquica}} de comunidades (\textit{\textcolor{temaseis}{clústering jerárquico}}). Devuelven particiones disjuntas del conjunto de nodos y permiten analizar la red a distintas resoluciones. 
+
+\begin{description}
+    \item[Clústering jerárquico aglomerativo]: se comienza con \textit{\textcolor{temaseis}{todos los nodos desconectados}}, considerando cada uno como una comunidad independiente. Se calculan las similitudes entre nodos (alta para nodos con una alta probabilidad de pertenecer a la misma comunidad y baja para los que pertenezcan a comunidades distitnas). Se van enlazando nodos por pares mezclando comunidades en orden de similitud decreciente. Como resultado obtenemos un \textit{\textcolor{temaseis}{dendrograma}}. Un algoritmo destacado es el \textit{\textcolor{temaseis}{Algoritmo de Ravasz}} con eficiencia $O(N^3)$. Para obtener la partición óptima, calculamos el valor de \textit{\textcolor{temaseis}{modularidad}} para cada posible partición y seleccionamos la que maximice el valor de la función.
+    \item[Clústering jerárquico divisivo]: se comienza con los \textit{\textcolor{temaseis}{nodos agrupados en subconjuntos iniciales}}, el caso extremo sería considerar toda la red como una única comunidad. Cada subconjunto se va dividiendo en otros más pequeños, hay varios métodos para esto pero uno muy famoso es la \textit{\textcolor{temaseis}{eliminación recursiva del enalce más débil}} actualizando el peso del resto al eliminarlos. Estos pasos se repiten hasta obtener el número de comunidades deseado o no se puedan eliminar más enlaces. 
+
+    El \textit{\textcolor{temaseis}{método de Girvan-Newman}} usa la \textit{\textcolor{temaseis}{intermediación de los enlaces}}\footnote{número de caminos geodésicos que pasan por el enlace en cuestión} como medida de similitud. Es un método muy popular aunque muy costoso: $O(L^2N)$ ($O(N^3)$ en redes dispersas). Hay algunas aproximaciones a este método que reemplazan la intermediación por una medida más local. El \textit{\textcolor{temaseis}{método de Radicchi}} considera el \textit{\textcolor{temaseis}{ratio entre el número de ciclos de longitud $g$}} en los que participa y el número de ciclos de longitud $g$ en los que podría participar dados los grados de sus extremos ($g$ pequeño para tener una medida local y un $g$ grande para una medida más global).
+\end{description}
+
+\subsubsection{\textcolor{temaseis}Comunidades centradas en la red}
+Se divide la red completa en conjuntos disjuntos (\textit{\textcolor{temaseis}{particionamiento de grafos}}).
+
+\begin{description}
+    \item[Clústering basado en similitud entre nodos]: aplicar $k$-medias o métodos similares a los nodos considerando la similitud de sus vecindarios. La \textit{\textcolor{temaseis}{equivalencia estructural}} es demasiado restrictiva para su uso en la práctica.
+    \item[Modelos de espacio latente] (escalado multidimensional, MDS): se mapean los nodos en un espacio de menor dimensión de modo que se preserve la proximidad entre nodos en el nuevo espacio. Después, se aplica un algoritmo de $k$-medias.
+    \item[Aproximación de modelos de bloques]: tratan de reordenar la matriz de adyacencia para encontrar grupos de nodos que compartan conexiones. La solución óptima corresponde a los \textit{\textcolor{temaseis}{mayores vectores propios}} de $A$.
+    \item[Clústering espectral]: para realizar la división resuelve el problema del \textit{\textcolor{temaseis}{corte mínimo}}. Busca una partición de la red en dos conjuntos disjuntos de nodos que minimice el número de enlaces entre ambos conjuntos. Como se suelen tener conjuntos desbalanceados, se normaliza la función objetivo dividiendo por el tamaño de la menor componente conexa resultante. Se puede obtener la solución a partir de \textit{\textcolor{temaseis}{los primeros vectores propios de menor valor de la matriz Laplaciana del grafo}}.
+    \item[Maximización de la modularidad]: comprende métodos heurísticos que tratan de maximizar $Q$. Tiene un problema: no detecta comunidades con menos de $\sqrt{L}$ aristas. Se usa también para determinar el número óptimo de comunidades en clústering jerárquico.
+    \begin{enumerate}[\color{temaseis}{$\longrightarrow$}]
+        \item \textbf{\textcolor{temaseis}{Método greedy de Newman}}: comienza con todos los nodos sueltos, evalúa todos las posibles pares de comunidades y realiza la mejor posible. Para cuando todos los nodos están en una sola comunidad. Genera una jerarquía de comunidades y devuelve la partición con mejor $Q$. Requiere $N-1$ pasos y sólo considera aquellas comunidades que comparten enlaces, acotando los pares posibles por $|E|$. El cambio de $Q$ sólo implica a dos comunidades y se calcula en tiempo constante, actualizar la matriz de adyacencia se hace en $O(N)$. Por tanto, el algoritmo es $O(|E|+N)$ ($O(N^2)$ en redes dispersas), aunque hay implementaciones con $O(N \log N)$. Este algoritmo no es muy bueno aunque es muy eficiente. Sirve como primer indicador de modularidad.
+        \item \textbf{\textcolor{temaseis}{Método de Lovaina}}: incorpora características de métodos aglomerativos (devuelve una jerarquía de comunidades). Es muy eficiente y puede manejar redes de hasta 100 millones de nodos. Funciona tanto en redes ponderadas como no ponderadas y se basa en un enfoque greedy que considera la optimización local de $Q$ hasta que no se produce mejora. En cada iteración tiene dos pasos: uno de \textit{\textcolor{temaseis}{optimización}} donde mejora localmente $Q$ y otro de \textit{\textcolor{temaseis}{agregación}} donde ``colapsa'' comunidades a meganodos, el peso de los enlaces entre comunidades será la suma de los enlaces entre cada comunidad en la red previa. El algoritmo empieza con $N$ comunidades, la etapa de optimización es una ascensión de colinas que trata de mover nodos entre comunidades mientras $Q$ vaya aumentando. Su eficiencia es $O(N \log N)$. Es capaz de aprender el número de comunidades.
+    \end{enumerate}
+\end{description}
+
+\subsubsection{\textcolor{temaseis}Comunidades con solapamiento}
+Los algoritmos estudiados no son capaces de detectar comunidades de más de 100-150 nodos en comunidades virtuales. Existen algunos algoritmos que consideran solapamiento como el \textit{\textcolor{temaseis}{Clique percolation method}} (CPM). Este método se basa en relajar la definición estricta de los cliques y usarlos como \textit{\textcolor{temaseis}{semillas}} para detectar comunidades más grandes. Como entrada, toma un parámetro $k$ y busca todos los cliques de ese tamaño. Encontrar cliques de tamaño máximo es exponencial, en cambio, encontrar cliques de tamaño $k$ es polinomial. Con los cliques encontrados se crea un \textit{\textcolor{temaseis}{grafo de cliques}}, considerando dos cliques como adyacentes si comparten $k-1$ nodos. Cada componente conexa de ese grafo de cliques formará una comunidad.
+
+\newpage
+\section{\textcolor{temasiete}{Tema 7}}
+
+
+\subsection{\textcolor{temasiete}Introducción}
+
+El estudio del comportamiento dinámico de las redes es muy importante para ver la evolución que existe en temas como enfermedades contagiosas e infecciosas, infecciones de virus en ordenadores, difusión de rumores...
+
+\subsection{\textcolor{temasiete}Modelos clásicos de propagación de epidemias}
+
+\subsubsection{\textcolor{temasiete}Hipótesis fundamentales del modelado epidémico}
+
+\begin{enumerate}
+    \item \textbf{\textcolor{temasiete}{Compartimentación}}: Los individuos se clasifican en \textcolor{temasiete}{\textit{Susceptible (S)}}, \textcolor{temasiete}{\textit{Infectado (I)}} y \textcolor{temasiete}{\textit{Recobrado (R)}}.
+
+    Algunas enfermedades requieren añadir estados como \textcolor{temasiete}{\textit{inmunes}} o \textcolor{temasiete}{\textit{latentes}}.
+
+    \item \textbf{\textcolor{temasiete}{Mezclado Homogéneo}}: todos los individuos tienen la misma probabilidad de infectarse. No tienen en cuenta la red.
+\end{enumerate}
+
+\subsection{\textcolor{temasiete}Estados básicos y transiciones del modelo clásico SIR}
+
+En el modelo SIR, tenemos los estados \textcolor{temasiete}{\textit{Susceptible (S)}}, \textcolor{temasiete}{\textit{Infectado (I)}} y \textcolor{temasiete}{\textit{Recobrado (R)}}, pudiendo pasar de Susceptible a Infectado por medio de una infección, de Infectado a Recobrado mediante una eliminación, y es posible volver a estar sano.
+
+\subsection{\textcolor{temasiete}Modelo SI}
+\subsubsection{\textcolor{temasiete}Principios de funcionamiento}
+
+Se basa en el mezclado homogéneo, y que en cada momento, cada individuo está tiene $\langle k \rangle$ contactos escogidos de forma aleatora, por lo que tiene una probabilidad de quedar infectado $\beta \in [0,1]$.
+
+En una población, hay $N$ individuos, con $I$ infectados y $S$ individuos susceptibles en cada instante, por lo que la probabilidad de encontrar a un individuo sano es de $\frac{S(t)}{N}$. 
+
+Cada individuo infectado tiene contacto con $\langle k \rangle\frac{S(t)}{N}$ sanos, con una probabilidad $\beta$ de transmisión, por lo que el ratio medio de nuevas infecciones es $$\frac{di}{dt} = \beta \langle k \rangle \frac{S(t)\cdot I(t)}{N} = \beta \langle k \rangle si = \beta \langle k \rangle i(1-i)$$$$ i = \frac{I}{N}, s = \frac{S}{N}$$
+
+El producto $\beta \langle k \rangle$ es el \textbf{\textcolor{temasiete}{ratio de transmisión}}, y a partir de él, podemos obtener el \textbf{\textcolor{temasiete}{tiempo característico $\tau$}}, es le tiempo necesario para que se contagie una fracción $\frac{1}{e}$ de la población. $$\tau = \frac{1}{\beta\langle k \rangle}$$
+Este valor es la inversa de la velocidad con la que se estiende la enfermedad. Aumenta con el número de contactos o probabilidad de contagio.
+
+En este modelo, la infección comienza con un brote exponencial, y el ratio de infectados aumenta hasta que todo el mundo queda infectado, produciendo una saturación. La pendiente de la curva de esta función depende del ratio de transmisión.
+
+\subsection{\textcolor{temasiete}Modelo SIS}
+
+Este modelo es el que sigue el resfriado comúno, donde los individuos o son susceptibles o infectados. Sigue manteniendo el mezclado homogéneo, pero sólo hay dos transiciones posibles $S\rightarrow I$ o $I \rightarrow S$.
+
+Se mantiene el ratio de contactos $<k$ y la probabilidad de contagio $\beta$ y se añade una probabilidad de recuperación $\mu$ para los individuos afectados. Esto modifica las ecuaciones de la siguiente forma. 
+
+$$\frac{di}{dt} =  \beta \langle k \rangle si - \mu i; \quad \frac{ds}{dt} = \mu i - \beta \langle k \rangle si; \quad s + i = 1$$
+
+En el modelo SIS surgen dos estados distintos.
+
+\begin{enumerate}[---]
+    \item \textbf{\textcolor{temasiete}{Estado endémico}}: $\beta\langle k \rangle>\mu$, igual que el modelo SI, pero satura por debajo de 1.
+    \item \textbf{\textcolor{temasiete}{Estado sano}}: $\beta\langle k \rangle < \mu$, se recuperan más individuos de los que se infectan.
+\end{enumerate}
+
+En este modelo (gripe aviar), tenemos el \textit{\textcolor{temasiete}{número reproductivo básico}} $R_0 \equiv \frac{\beta\langle k \rangle}{\mu}$, que indica cuántos individuos se infectarán por cada individuo infectado. Si $R_0 > 1$, tenemos el estado endémico o \textbf{\textcolor{temasiete}{epidemia}} y si $R_0 < 1$, tenemos el estado sano o \textbf{\textcolor{temasiete}{extinción del brote}}. Este parámetro afecta al tiempo característico de la siguiente forma: $$\tau = \frac{1}{\mu(R_0-1)}$$
+
+\subsection{\textcolor{temasiete}Modelo SIR}
+
+En este modelo, una vez que un individuo se infecta, no puede recuperarse y queda inmune o muere. Aplica el modelo homogéneo con tres estados $S$, $I$ y $R$, con las transiciones $S\rightarrow I$ y $I \rightarrow R$. 
+
+Este modelo tiene una dinámica con dos fases:
+
+\begin{enumerate}
+    \item Los individuos infectados infectan a los susceptibles según el ratio de transmisión $B\langle k \rangle$.
+    \item Los individuos se recuperan con una probabilidad $\mu$.
+\end{enumerate}
+
+En este caso, tenemos tres ecuaciones distintas:
+$$\frac{di}{dt} =  \beta \langle k \rangle si - \mu i; \quad \frac{ds}{dt} = - \beta \langle k \rangle si$$$$\frac{dr}{dt} = \mu i; \quad s + i = 1$$
+
+En el modelo SIR, si $\beta\langle k \rangle > \mu$, $i$ crece hasta un pico máximo y luego decrece hasta 0. El ratio de susceptibles decrece monótonamente y el de infectados crece de la misma manera.
+
+$s$ satura pero nunca llega a 0, porque con $i\rightarrow0$ ya no hay individuos que puedan infectar. $r$ nunca llega a valer 1.
+
+\subsection{\textcolor{temasiete}Modelo SIRS}
+
+Es el modelo que sigue la difusión de informació o virus informáticos, donde sólo los individuos recuperados pueden volver a ser individuos susceptibles.
+
+\subsection{\textcolor{temasiete}Comportamientos importantes de los modelos epidémicos}
+\begin{enumerate}[$\bullet$]
+    \item \textbf{\textcolor{temasiete}{Comportamiento temprano}}: es el patrón de comportamiento de la epidemia en las fases iniciales.
+    \item \textbf{\textcolor{temasiete}{Comportamiento tardío}}: es el patrón de las fases finales cuando $t\rightarrow\infty$.
+\end{enumerate}
+
+Los tres modelos tienen un comportamiento temprano similar, pero el comportamiento tardío es muy distinto.
+
+\subsection{\textcolor{temasiete}Modelos de propagación de epidemias}
+
+Los modelos clásicos no tienen en cuenta explícitamente que la propagación se produce en una red compleja y que se da un mezclado homogéneo. Pero realmente las epidemias se transmiten por los enlaces de la red social, por lo que la red subyacente es importante en el proceso epidémico, ya que la propagación ocurre si los portadores están conectados entre sí.
+
+La topología de la red (tipo de red, densidad, distribución de grados...) influye en los procesos que ocurren en el sistema complejo (a qué estado convergen los nodos, cuánto se tarda en llegar a ese estado, cómo inmunizar a la población). 
+
+El mecanismo de difusión también influye en el proceso global, teniendo dos tipos de contagios:
+\begin{enumerate}
+    \item \textbf{\textcolor{temasiete}{Contagio simple}}: cada nodo conectado a ti te infecta con una probabilidad $p$.
+    \item \textbf{\textcolor{temasiete}{Contagio complejo}}: para infectarte, necesitas el contacto con más individuos infectados.
+\end{enumerate}
+
+Los modelos que consideran las redes, se comportan como los clásicos, pero consideran los contactos definidos por la red. Con esto, se define un \textbf{\textcolor{temasiete}{ratio de infección $\beta$}} como la probabilidad de infección entre dos individuos conectados por un enlace simple. Este ratio es propio de la enfermedad.
+
+\subsubsection{\textcolor{temasiete}Modelo SIR en redes complejas: Fundamentos}
+
+Usando el modelo SI, una población con $N$ individuos y en el instante inicial con un solo nodo infectado, empezará a propagar la enfermedad a sus vecinos con susceptibles con probabilidad $\beta$. Los individuos con mayor grado tienen mayor probabilidad de infectarse. 
+
+El ratio de transmisión no puede calcularse directamente, ya que depende de la red. La alternativa es usar un \textbf{\textcolor{temasiete}{modelo basado en agentes}}.
+
+Con esto se puede trabajar a nivel de nodo, conociendo sus propiedades individuales y considerando interacciones locales, y modeloar el progreso del brote. Cuantas más características considere el modelo, más realista será.
+
+Existen modelos epidémicos y de propagación de virus informáticos, que utilizan el modelo SIR, modelos de propagación de rumores, de difusión de conocimiento, etc.
+
+\subsubsection{\textcolor{temasiete}Modelo SI en redes aleatorias}
+
+Cuando $t\rightarrow\infty$ todos los nodos susceptibles con posibilidad de infectarse están infectados, siendo la única condición que entre un nodo y otro infectado exista un camino en la red. La diferencia con el modelo clásico es que solo se infectan los nodos pertenecientes a la componente conexa infectada, por lo que el alcance de la infección depende de dónde surja la enfermedad.
+
+Cuándo los nodos tienen un acoplamiento preferencial, la infección se extiende más rápido.
+
+Cuándo la probabilidad de reasignación aumenta, sin aumentar la probabilidad de infección, disminuye. En cambio, si se aumentan ambas probabilidades, el número de infectados aumenta mucho.
+
+\subsubsection{\textcolor{temasiete}Modelo SIRS en redes aleatorias}
+
+\begin{enumerate}[$\bullet$]
+    \item \textcolor{temasiete}{$S\rightarrow I$}: Cada agente infectado puede infectar un agente susceptible conectado a él con probabilidad $\beta$.
+    \item \textcolor{temasiete}{$I\rightarrow R|S$}: cada agente infectado puede recuperarse con probabilidad $\mu$. Si pasa a Recobrado, se vuelve inmune con probabilidad $\iota$, y en caso contrario, vuelve a ser Susceptible.
+\end{enumerate}
+
+\subsection{\textcolor{temasiete}Modelo SIR en redes complejas}
+
+Para los modelos SI y SIR se puede estudiar de forma analítica el comportamiento temprano y tardío, pudiendo diseñarse soluciones analíticas para conocer la progresión de la epidemia, haciendo uso de aproximaciones.
+
+\subsubsection{\textcolor{temasiete}Aproximación de bloques por grados}
+
+Se considera una red con una distribución de grados $p_k$ y se analiza la componnete gigante. Los nodos se agrupan por su grado, que son estadísticamente equivalentes y que tienen el mismo ratio de infección.
+$$i_k = \frac{I_k}{N_k}, i = \sum_K P(k)i_k$$
+donde $i_k$ es la fracción de nodos con grado $k$ infectados. La suma de nodos infectados de cada bloque da el total de infectados.
+
+En este caso, la ecuación pasa a ser $$\frac{di_k}{dt} = \beta(1-i_k)k\Theta_k(t)-\mu i_k$$
+donde $i_k$ es la probabilidad de nodos de grado $k$ susceptibles, $k$ el número de vecinos sanos y $\Theta_k$ es el ratio de veciones infectados para los nodos de grado $k$.
+
+\subsection{\textcolor{temasiete}Modelo SI en redes}
+
+El modelo SI en redes complejas lo podemos determinar como $$\frac{di_k}{dt} = \beta(1-i_k)k\Theta_k(t)$$
+
+En este modelo, el tiempo característico $\tau$ equivale al periodo de incubación. Cuanto menor sea $\tau$, más rápido crece. El modelo epidémico en redes complejas está controlado por la combinación de $\beta$ y $\tau$, por lo tanto, la transición de la epidemia está guiada por:
+
+\begin{enumerate}[\textcolor{temasiete}{$\bullet$}]
+    \item O aumenta el perido $\tau$.
+    \item O aumenta el ratio de infección $\beta$.
+\end{enumerate}
+
+El momento concreto de la transición de estas variables, la probabilidad y el tamaño de la epidemia depende de la estructura de la red según los momentos $\langle k \rangle$ y $\langle k^2 \rangle$ de la distribución de grados.
+
+En las redes libres de escala, $\langle k^2 \rangle\rightarrow\infty$ para $ N \rightarrow\infty$, luego si tenemos las siguientes ecuaciones del tiempo característico:
+\begin{displaymath}
+\begin{matrix}
+\text{Modelo SI} & \text{Modelo SIS} & \text{Modelo SIR} \\
+\tau = \frac{\langle k \rangle}{\beta(\langle k^2 \rangle - \langle k \rangle)} & \tau = \frac{\langle k \rangle}{\beta\langle k^2 \rangle - \mu\langle k \rangle} & \tau = \frac{\langle k \rangle}{\beta\langle k^2 \rangle -(\mu+\beta)\langle k \rangle}  
+\end{matrix}
+\end{displaymath}
+
+el tiempo característico $\tau$ desaparece (es 0), luego la epidemia es instantánea.
+
+\subsection{\textcolor{temasiete}Umbral epidemológico}
+
+Para qeu haya un brote epidémico en el modelo SIR, se tiene que dar que $\tau > 0$, es decir, para una red aleatoria ER, $\tau_{ER} = \frac{1}{\beta\langle k \rangle-\mu} > 0$. 
+Siendo $\lambda \equiv \frac{\beta}{\mu}$ el ratio de transmisión de la enfermedad, tenemos que $\lambda > \frac{1}{\langle k \rangle}$. 
+
+El umbral epidemológico en redes se denomina como $\lambda_C$ y en redes aleatorias es $\lambda_C^{ER} = \frac{1}{\langle k \rangle+1}$ y para redes libres de escala es $\lambda_C^{SF} = \frac{\langle k \rangle}{\langle k^2 \rangle - \langle k \rangle}$
+
+Si $\lambda > \lambda_C$ se produce un estado endémico, sino, muere el patógeno.
+
+\subsection{\textcolor{temasiete}Estrategias de inmunización}
+
+\begin{description}
+    \item[Intervenciones para reducir el contagio]: pueden reducir el ratio de transmisión, $\lambda$, por debajo del umbral crítico $\lambda_c$ que provoca la epidemia.
+    \item[Intervenciones para reducir el contacto]: hacen la red más dispersa, pueden aumentar el umbral crítico $\lambda_c$.
+    \item[Campañas de vacunación]: pueden eliminar nodos de la red, reduciendo el ratio de transmisión $\lambda$.
+    \begin{enumerate}[\color{temasiete}{$\bigstar$}]
+        \item \textbf{\textcolor{temasiete}{Selección aleatoria de los individuos a vacunar}}: se escogen aleatoriamente un ratio $g$ de inviduos a los que vacunar ($\beta \rightarrow \beta (1 - g)$).
+
+        \begin{displaymath}
+            \frac{\beta}{\mu} (1 - g_c^{ER}) = \frac{1}{\langle k \rangle + 1} \qquad \frac{\beta}{\mu} (1 - g_c^{SF}) = \frac{\langle k \rangle}{\langle k^2 \rangle}
+        \end{displaymath}
+
+        Donde $g_c$ es el ratio de inmunización necesario para bajar $\lambda$ por debajo de $\lambda_c$. Si $\langle k^2 \rangle \rightarrow \infty$ la inmunización aleatoria no puede prevenir el brote, por tanto, no \textit{\textcolor{temasiete}{no funciona en redes libres de escala}}.
+
+        \item \textbf{\textcolor{temasiete}{Inmunización dirigida}}: debido a que los hubs son los responsables de propagar la enfermedad, inmunizar a todos los nodos con grado $k > k_0$.
+
+        \begin{displaymath}
+            \lambda_c = \frac{\langle k \rangle}{\langle k^2 \rangle} = \frac{k_0 - m}{k_0 m} \left(\ln \frac{k_0}{m} \right)^{-1}
+        \end{displaymath}
+
+        Según se eliminan hubs, el término $\langle k^2 \rangle$ decrece, lo que provoca que $\lambda_c$ aumente haciendo más complicada la propagación del brote.
+
+        En la mayoría de casos es difícil identificar quiénes son los hubs, ya que desconocemos los grados de los nodos. En estos casos, lo que se hace es escoger una fracción $p$ de individuos aleatoriamente e inmunizar un vecino de cada uno de ellos escogido aleatoriamente.
+
+        La inmunización dirigida mejora a la aleatoria incluso en redes con un mayor exponente ($\gamma$) en las que los hubs son menos significativos.
+    \end{enumerate}
+\end{description}
+
+\subsection{\textcolor{temasiete}Modelos de difusión de opiniones}
+\subsubsection{\textcolor{temasiete}Contagio de umbral}
+En los \textit{\textcolor{temasiete}{modelos de umbral}} la adopción requiere superar un umbral asociado a un porcentaje de vecinos infectados. Pueden ser comunes a toda la población o particulares a cada agente. Pueden incluir información sobre las ventajas de adopción (\textit{\textcolor{temasiete}{recompensas}})
+
+Si un nodo adopta una opinión, puede generarse una \textit{\textcolor{temasiete}{propagación en cascada}}. Esta propagación depende de la estructura de comunidades de la red y de la recompensa.
+
+\textbf{\textcolor{temasiete}{Márketing viral}}: cuando no se puede aumentar la recompensa, otra estrategia es recompensar a un número pequeño de individuos (\textit{\textcolor{temasiete}{semillas}}) para que adopten esa opinión. Estos individuos son los \textit{\textcolor{temasiete}{hubs}}. La elección de las semillas es clave para producir el efecto cascada.
+
+Los \textbf{\textcolor{temasiete}{umbrales heterogéneos}} consideran que cada nodo de la red valora de forma distinta los diferentes comportamientos $A$ y $B$, asociando un umbral $a_v$ y $b_v$ a cada nodo $v$ de la red. 
+
+También tenemos las \textbf{\textcolor{temasiete}{organizaciones colectivas}}, como la organización de una manifestación, la recompensa negativa de ir a la manifestación puede ser mucho más alta que en cualquier otro proceso de toma de decisiones. Los medios de comunicación suelen estar controlados por el gobierno y los ciudadanos no tienen conocimiento de la voluntad del resto por participar (\textit{\textcolor{temasiete}{ignorancia pluralista}}). Para modelar esta red, cada nodo tiene un umbral que indica su voluntad para manifestarse y además, cada persona sólo conoce los umbrales de sus vecinos por lo que no puede predecir qué ocurrirá.
+
+\end{document}
