@@ -1,7 +1,8 @@
 # Apuntes
 Apuntes hechos a LaTeX de algunas asignaturas de la carrera.
 
-###Compilación
+### Compilación
+
 Para compilar simplemente:
 ```
 make
